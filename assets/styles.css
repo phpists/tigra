@@ -1286,7 +1286,17 @@ footer a:hover {
 .profile-setting-change {
     color: #FF9000;
     cursor: pointer;
+    stroke: #FF9000;
 }
+
+.profile-setting-change svg {
+    display: none;
+}
+
+.profile-setting-change path {
+    stroke: #FF9000;
+}
+
 
 .profile-setting-avatar-wrapper {
     width: 290px;
@@ -1849,13 +1859,16 @@ footer a:hover {
 
 @media(max-width: 500px) {
     .profile-setting-item {
-        grid-template-columns: 1fr 1fr;
         justify-items: center;
+        font-size: 11px;
     }
 
-    .profile-setting-change {
-        grid-column: 1/3;
-        margin-top: 10px;
+    .profile-setting-change span {
+        display: none;
+    }
+
+    .profile-setting-change svg {
+        display: block;
     }
 
     .profile-setting-avatar-wrapper {
