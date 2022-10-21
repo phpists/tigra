@@ -66,6 +66,47 @@ function handleToggleModal(buttonId, modalId) {
     })
 }
 
+const handleToggleTabs = () => {
+    const tabButtons = document.querySelectorAll(".tab-btn");
+    const tabs = document.querySelectorAll(".tab-page")
+    const elipse = document.querySelector(".manage-ellipse");
+    const ELIPSE_MENAGE_CARD_CLASSES = {
+        "1": "subscribe-ellipse-1",
+        "2": "ellipse-2",
+        "3": "ellipse-4",
+        "4": "ellipse-6",
+    }
+
+    tabButtons?.forEach(button => {
+        button?.addEventListener("click", (e) => {
+            const currentButton = e.target;
+            const selectedPage = currentButton.getAttribute("data-page");
+            
+            // toggle active btn
+            tabButtons.forEach(btn => {
+                btn.getAttribute("data-page") === selectedPage 
+                ?  btn.classList.add("active")
+                : btn.classList.remove("active")
+            })
+
+            // toggle active tab
+            tabs.forEach(tab => {
+                tab.getAttribute("data-page") === selectedPage 
+                ?  tab.classList.add("active")
+                : tab.classList.remove("active")
+            })
+
+            console.log(ELIPSE_MENAGE_CARD_CLASSES[selectedPage])
+            //togle elipse 
+            elipse.className = `manage-ellipse ellipse ${ELIPSE_MENAGE_CARD_CLASSES[selectedPage]}`
+        })
+    })
+
+}
+
+
+
+
 document.addEventListener("DOMContentLoaded", function(event) {
     handleToggleProfileDropdown();
     handleTogglePasswordInput();
@@ -77,5 +118,15 @@ document.addEventListener("DOMContentLoaded", function(event) {
     handleToggleModal("changePhone", "changePhoneModal");
     handleToggleModal("paySubscribe", "paySubscribeModal");
     handleToggleModal("paySubscribeError", "paySubscribeErrorModal");
+    handleToggleTabs();
+
+    window.addEventListener("scroll", (e) => {
+        const elipses = document.querySelectorAll(".ellipse");
+
+        elipses.forEach((elipse, i) => {
+            const divideNumber = (i % 2 === 0) ? 8 : 5;
+            elipse.style.transform = `translateY(${window.pageYOffset / divideNumber}px)`
+        })
+    })
   });
 

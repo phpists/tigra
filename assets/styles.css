@@ -422,10 +422,17 @@ button[disabled] {
     z-index: -1;
 }
 
+.ellipse-2 {
+    position: absolute;
+    top: 90%;
+    right: 55%;
+    z-index: -1;
+}
+
 .ellipse-6 {
     position: absolute;
     top: 90%;
-    left: 5%;
+    right: 5%;
     z-index: -1;
     transform: rotate(90deg);
 }
@@ -682,6 +689,7 @@ footer {
     font-size: 12px;
     line-height: 150%;
     color: #BBBFC1;
+    z-index: 100;
 }
 
 footer a {
@@ -1538,6 +1546,24 @@ footer a:hover {
 
 .footer-rights-title {
     margin-top: 25px;
+}
+
+.ellipse {
+    z-index: -1;
+}
+
+.manage-ellipse {
+    transition: all .3s ease !important;
+}
+
+/* TABS */
+
+.tab-page {
+    display: none;
+}
+
+.tab-page.active {
+    display: block;
 }
 
 /* RESPONSIVE */

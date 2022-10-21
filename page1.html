@@ -54,59 +54,326 @@
     <div class="position-relative">
         <div class="wrapper manage-card">
             <div class="d-flex align-items-center gap-3 manage-card-nav">
-                <button class="tab-btn active">доступ к плейлисту</button>
-                <a href="http://test33.phpist.com.ua/tigra/page2.html" class="w-100">
-                    <button class="tab-btn">
-                        Управление подпиской
-                    </button>
-                </a>
-                <a href="http://test33.phpist.com.ua/tigra/page4.html" class="w-100">
-                    <button class="tab-btn">Настройки профиля</button>
-                </a>
-                <a href="http://test33.phpist.com.ua/tigra/page6.html" class="w-100">
-                    <button class="tab-btn">История платежей</button>
-                </a>
+                <button class="tab-btn active" data-page="1">доступ к плейлисту</button>
+                <button class="tab-btn" data-page="2">
+                    Управление подпиской
+                </button>
+                <button class="tab-btn" data-page="3">Настройки профиля</button>
+                <button class="tab-btn" data-page="4">История платежей</button>
             </div>
-            <div class="playlists-manage-wrapper">
-                <div class="w-50 playlists-manage-part">
-                    <div class="manage-card-message">
-                        Ваша подписка не активирована!
-                        <br><br>
-                        Выберите подходящий план во вкладке “Управление подпиской” и оплатите, чтобы получить доступ
-                    </div>
-                    <div class="playlists-manage-item d-flex align-items-center justify-content-between">
-                        <div class="playlists-manage-item-title">Плей-лист в формате m3u</div>
-                        <button class="button" disabled>скачать файл</button>
-                    </div>
-                    <div class="playlists-manage-item d-flex align-items-center justify-content-between">
-                        <div class="playlists-manage-item-title">прямая ссылка без авторизации</div>
-                        <button class="button" disabled>скопировать ссылку</button>
-                    </div>
-                    <div class="playlists-manage-item d-flex align-items-center justify-content-between">
-                        <div>
-                            <div class="playlists-manage-item-title">медиатека</div>
-                            <div class="playlists-manage-item-subtitle">Ссылка для OTT player</div>
+            <!-- START PAGE 1 -->
+            <div class="tab-page active" data-page="1">
+                <div class="playlists-manage-wrapper">
+                    <div class="w-50 playlists-manage-part">
+                        <div class="manage-card-message">
+                            Ваша подписка не активирована!
+                            <br><br>
+                            Выберите подходящий план во вкладке “Управление подпиской” и оплатите, чтобы получить доступ
                         </div>
-                        <button class="button" disabled>скопировать ссылку</button>
+                        <div class="playlists-manage-item d-flex align-items-center justify-content-between">
+                            <div class="playlists-manage-item-title">Плей-лист в формате m3u</div>
+                            <button class="button " disabled>скачать файл</button>
+                        </div>
+                        <div class="playlists-manage-item d-flex align-items-center justify-content-between">
+                            <div class="playlists-manage-item-title">прямая ссылка без авторизации</div>
+                            <button class="button" disabled>скопировать ссылку</button>
+                        </div>
+                        <div class="playlists-manage-item d-flex align-items-center justify-content-between">
+                            <div>
+                                <div class="playlists-manage-item-title">медиатека</div>
+                                <div class="playlists-manage-item-subtitle">Ссылка для OTT player</div>
+                            </div>
+                            <button class="button" disabled>скопировать ссылку</button>
+                        </div>
+                        <div class="playlists-manage-item d-flex align-items-center justify-content-between">
+                            <div class="playlists-manage-item-title">Ministra Player</div>
+                            <button class="button" disabled>получить доступ</button>
+                        </div>
                     </div>
-                    <div class="playlists-manage-item d-flex align-items-center justify-content-between">
-                        <div class="playlists-manage-item-title">Ministra Player</div>
-                        <button class="button" disabled>получить доступ</button>
+                    <div class="w-50 playlists-manage-image">
+                        <img src="./assets/images/image1.png" alt="">
                     </div>
-                </div>
-                <div class="w-50 playlists-manage-image">
-                    <img src="./assets/images/image1.png" alt="">
                 </div>
             </div>
+            <!-- END PAGE 1 -->
+            <!-- START PAGE 1 ACTIVE -->
+            <!-- <div class="tab-page" data-page="1">
+                <div class="playlists-manage-wrapper playlists-parameters-wrapper">
+                    <div class="w-50 playlists-manage-part">
+                        <div class="manage-card-message">
+                            Ура, ваша подписка активирована!
+                            <br><br>
+                            Вам доступен одновременный просмотр на четырех устройствах онлайн: 2 устройства на OttPlayer
+                            и 2
+                            устройства на Ministra Player
+                        </div>
+                        <div class="playlists-manage-item d-flex align-items-center justify-content-between">
+                            <div class="playlists-manage-item-title">Плей-лист в формате m3u</div>
+                            <button class="button">скачать файл</button>
+                        </div>
+                        <div class="playlists-manage-item d-flex align-items-center justify-content-between">
+                            <div class="playlists-manage-item-title">прямая ссылка без авторизации</div>
+                            <button class="button">скопировать ссылку</button>
+                        </div>
+                        <div class="playlists-manage-item d-flex align-items-center justify-content-between">
+                            <div>
+                                <div class="playlists-manage-item-title">медиатека</div>
+                                <div class="playlists-manage-item-subtitle">Ссылка для OTT player</div>
+                            </div>
+                            <button class="button">скопировать ссылку</button>
+                        </div>
+                        <div class="playlists-manage-item d-flex align-items-center justify-content-between">
+                            <div class="playlists-manage-item-title">Ministra Player</div>
+                            <button class="button active">доступ получен</button>
+                        </div>
+                    </div>
+                    <div class="w-50 playlists-manage-image">
+                        <div class="playlists-parameters">
+                            <div class="playlists-parameters-title">Параметры подключения для Ministra Player</div>
+                            <div class="playlists-parameters-item">
+                                <div>URL</div>
+                                <span>https://vodofun.tv</span>
+                            </div>
+                            <div class="playlists-parameters-item">
+                                <div>Логин</div>
+                                <span>e5541748</span>
+                            </div>
+                            <div class="playlists-parameters-item">
+                                <div>Пароль</div>
+                                <span>Hsqwdgozq</span>
+                            </div>
+                            <div class="playlists-parameters-item">
+                                <div>Ключ</div>
+                                <span>11Km83ZuxXgvl</span>
+                            </div>
+                            <div class="playlists-parameters-item mb-3">
+                                <div>Лицензионный ключ</div>
+                                <span>HY12a00xa365YGVd54d123s</span>
+                            </div>
+                            <div class="playlists-parameters-title mb-0">как смотреть?</div>
+                            <div class="playlists-parameters-descr">
+                                1. Установить Ministra Player на ваше устройство; <br>
+                                2. В настройках плеера указать параметры подключения.
+                            </div>
+                            <div class="playlists-parameters-info">
+                                * поле "лицензионный ключ" оставить пустым
+                            </div>
+                            <div class="playlists-parameters-background"></div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            <!-- END PAGE 1 ACTIVE -->
+            <!-- START PAGE 2 -->
+            <div class="tab-page" data-page="2">
+                <div class=" subscribe-content">
+                    <div class="subsribe-plan-card">
+                        <div class="subsribe-plan-title">месячная</div>
+                        <div class="subsribe-plan-status">не активна</div>
+                        <div class="subsribe-plan-period">1 месяц</div>
+                        <div class="subsribe-plan-name">vip-пакет все включено</div>
+                        <div class="subsribe-plan-price">$4</div>
+                        <button class="button" id="paySubscribe">оформить подписку</button>
+                    </div>
+                    <div class="subsribe-plan-card">
+                        <div class="subsribe-plan-title">квартальная</div>
+                        <div class="subsribe-plan-status">не активна</div>
+                        <div class="subsribe-plan-period">3 месяца</div>
+                        <div class="subsribe-plan-name">vip-пакет все включено</div>
+                        <div class="subsribe-plan-price">$12</div>
+                        <button class="button" id="paySubscribeError">оформить подписку</button>
+                    </div>
+                    <div class="subsribe-plan-card">
+                        <div class="subsribe-plan-title">Полугодовая</div>
+                        <div class="subsribe-plan-status">не активна</div>
+                        <div class="subsribe-plan-period">6 месяцев</div>
+                        <div class="subsribe-plan-name">vip-пакет все включено</div>
+                        <div class="subsribe-plan-price">
+                            $21
+                            <span>-12,5%</span>
+                        </div>
+                        <button class="button">оформить подписку</button>
+                    </div>
+                    <div class="subsribe-plan-card">
+                        <div class="subsribe-plan-title">Годовая</div>
+                        <div class="subsribe-plan-status">не активна</div>
+                        <div class="subsribe-plan-period">12 месяцев</div>
+                        <div class="subsribe-plan-name">vip-пакет все включено</div>
+                        <div class="subsribe-plan-price">
+                            $36
+                            <span>-25%</span>
+                        </div>
+                        <button class="button">оформить подписку</button>
+                    </div>
+                </div>
+                <div class="subscribe-footer">
+                    <div class="subscribe-promote">
+                        <div class="subsribe-plan-price m-0">$100</div>
+                        <div class="subscribe-promote-title">или купите один <br> раз и навсегда</div>
+                        <button class="button-secondary subscribe-button-promote">купить бессрочно</button>
+                    </div>
+                    <img src="./assets/images/payment.png" alt="">
+                </div>
+            </div>
+            <!-- END PAGE 2 -->
+            <!-- START PAGE 2 ACTIVE -->
+            <!-- <div class="tab-page" data-page="2">
+                <div class="subscribe-content">
+                    <div class="h-100 d-flex flex-column">
+                        <div class="subsribe-plan-card">
+                            <div class="subsribe-plan-title">месячная</div>
+                            <div class="subsribe-plan-status">не активна</div>
+                            <div class="subsribe-plan-period">1 месяц</div>
+                            <div class="subsribe-plan-name">vip-пакет все включено</div>
+                            <div class="subsribe-plan-price">$4</div>
+                            <button class="button" disabled>сменить план</button>
+                        </div>
+                    </div>
+                    <div class="h-100 d-flex flex-column">
+                        <div class="subsribe-plan-card active">
+                            <div class="subsribe-plan-title">квартальная</div>
+                            <div class="subsribe-plan-status active">активна</div>
+                            <div class="subsribe-plan-period">3 месяца</div>
+                            <div class="subsribe-plan-name">vip-пакет все включено</div>
+                            <div class="subsribe-plan-divider"></div>
+                            <div class="subsribe-plan-autopay">
+                                <span>автопродление</span>
+                                <div class="subsribe-plan-toggle">
+                                    <div></div>
+                                </div>
+                            </div>
+                            <div class="subsribe-plan-divider"></div>
+                            <div class="subsribe-next-payment-date">
+                                <span>Следущее списание </span>
+                                <div>13.08.2023</div>
+                            </div>
+                            <div class="subsribe-plan-price">$12</div>
+                            <button class="button">продлить подписку</button>
+                        </div>
+                    </div>
+                    <div class="h-100 d-flex flex-column">
+                        <div class="subsribe-plan-card">
+                            <div class="subsribe-plan-title">Полугодовая</div>
+                            <div class="subsribe-plan-status">не активна</div>
+                            <div class="subsribe-plan-period">6 месяцев</div>
+                            <div class="subsribe-plan-name">vip-пакет все включено</div>
+                            <div class="subsribe-plan-price">
+                                $21
+                                <span>-12,5%</span>
+                            </div>
+                            <button class="button" disabled>сменить план</button>
+                        </div>
+                        <div class="subscribe-promote small">
+                            <button class="button-secondary subscribe-button-promote">купить бессрочно</button>
+                        </div>
+                    </div>
+                    <div class="h-100 d-flex flex-column">
+                        <div class="subsribe-plan-card">
+                            <div class="subsribe-plan-title">Годовая</div>
+                            <div class="subsribe-plan-status">не активна</div>
+                            <div class="subsribe-plan-period">12 месяцев</div>
+                            <div class="subsribe-plan-name">vip-пакет все включено</div>
+                            <div class="subsribe-plan-price">
+                                $36
+                                <span>-25%</span>
+                            </div>
+                            <button class="button" disabled>сменить план</button>
+                        </div>
+                        <img src="./assets/images/payment.png" class="subscribe-plan-payment-image" alt="">
+                    </div>
+
+                </div>
+            </div> -->
+            <!-- END PAGE 2 ACTIVE -->
+            <!-- START PAGE 3 -->
+            <div class="tab-page" data-page="3">
+                <div class="profile-setting-content">
+                    <div class="profile-setting-data">
+                        <div class="profile-setting-header">
+                            <div>Ваши данные</div>
+                            <span>ID 266568841322</span>
+                        </div>
+                        <div class="profile-setting-item">
+                            <div class="profile-setting-label">Логин</div>
+                            <div class="profile-setting-value">@Igiryaxa</div>
+                            <div class="profile-setting-change" id="changeLogin">Изменить</div>
+                        </div>
+                        <div class="profile-setting-item">
+                            <div class="profile-setting-label">Пароль</div>
+                            <div class="profile-setting-value">169$6Dsg551</div>
+                            <div class="profile-setting-change" id="changePassword">Изменить</div>
+                        </div>
+                        <div class="profile-setting-item">
+                            <div class="profile-setting-label">E-mail</div>
+                            <div class="profile-setting-value">ooo@mail.com</div>
+                            <div class="profile-setting-change" id="changeEmail">Изменить</div>
+                        </div>
+                        <div class="profile-setting-item">
+                            <div class="profile-setting-label">Телефон</div>
+                            <div class="profile-setting-value">+7 (985) 325 65 96</div>
+                            <div class="profile-setting-change" id="changePhone">Изменить</div>
+                        </div>
+                    </div>
+                    <div cla>
+                        <div class="profile-setting-avatar-wrapper">
+                            <button class="profile-setting-avatar-btn">Upload file</button>
+                            <div class="profile-setting-avatar"
+                                style="background: url('./assets/images/avatar.png') center center/cover no-repeat;">
+                            </div>
+                        </div>
+                        <div class="profile-setting-avatar-label">Сменить аватарку</div>
+                    </div>
+                </div>
+            </div>
+            <!-- END PAGE 3 -->
+            <!-- START PAGE 4 -->
+            <div class="tab-page" data-page="4">
+                <div class="payment-history-content">
+                    <div>
+                        <div class="payment-history-title">история платежей</div>
+                        <div>
+                            <div class="payment-history-item">
+                                <div>11.08.2022</div>
+                                <div>1 месяц</div>
+                                <div>$4</div>
+                                <div class="active">Активна</div>
+                            </div>
+                            <div class="payment-history-item">
+                                <div>10.07.2022</div>
+                                <div>1 месяц</div>
+                                <div>$4</div>
+                                <div>Не активна</div>
+                            </div>
+                            <div class="payment-history-item">
+                                <div>08.06.2022</div>
+                                <div>1 месяц</div>
+                                <div>$4</div>
+                                <div>Не активна</div>
+                            </div>
+                            <div class="payment-history-item">
+                                <div>03.05.2022</div>
+                                <div>1 месяц</div>
+                                <div>$4</div>
+                                <div>Не активна</div>
+                            </div>
+                        </div>
+                    </div>
+                    <di class="payment-history-image-wrapper">
+                        <div class="payment-history-image"></div>
+                </div>
+            </div>
+            <!-- END PAGE 4 -->
+
         </div>
-        <img src="./assets/images/icons/ellipse-1.svg" class="ellipse-1" alt="">
+        <img src="./assets/images/icons/ellipse-1.svg" class="manage-ellipse ellipse ellipse-1" alt="">
+
     </div>
     </div>
     <div class="wrapper recomendation-title">
         рекомендуемые приложения для просмотра
     </div>
     <div class="wrapper position-relative recomendation-wrapper">
-        <img src="./assets/images/icons/ellipse-recomend-2.svg" alt="" class="recomendation-elip-2">
+        <img src="./assets/images/icons/ellipse-recomend-2.svg" alt="" class="ellipse recomendation-elip-2">
         <div class="position-relative recomendation-card--info">
             <div class="recomendation-card">
                 <div class="d-flex align-items-center justify-content-start">
@@ -120,7 +387,7 @@
                     из понравившихся
                 </div>
             </div>
-            <img src="./assets/images/icons/ellipse-recomend-1.svg" alt="" class="recomendation-elip-1">
+            <img src="./assets/images/icons/ellipse-recomend-1.svg" alt="" class=" ellipse recomendation-elip-1">
         </div>
         <div class="recomendation-card">
             <div class="recomendation-card-info">
@@ -343,7 +610,7 @@
                     Оплатите подписку
                 </div>
             </div>
-            <img src="./assets/images/icons/ellipse-settings-1.svg" alt="" class="setting-ellips-1">
+            <img src="./assets/images/icons/ellipse-settings-1.svg" alt="" class="ellipse setting-ellips-1">
         </div>
 
         <div class="position-relative">
@@ -355,7 +622,7 @@
                     Получите плей-лист
                 </div>
             </div>
-            <img src="./assets/images/icons/ellipse-settings-2.svg" alt="" class="setting-ellips-2">
+            <img src="./assets/images/icons/ellipse-settings-2.svg" alt="" class=" ellipse setting-ellips-2">
         </div>
         <div class="position-relative">
             <div class="how-to-set-up-card">
@@ -366,7 +633,7 @@
                     Установите <br> подходящий IPTV-плеер
                 </div>
             </div>
-            <img src="./assets/images/icons/ellipse-settings-3.svg" alt="" class="setting-ellips-3">
+            <img src="./assets/images/icons/ellipse-settings-3.svg" alt="" class="ellipse setting-ellips-3">
         </div>
         <div class="how-to-set-up-card--empty"></div>
         <div class="position-relative">
@@ -378,7 +645,7 @@
                     Пропишите плей-лист в плеере
                 </div>
             </div>
-            <img src="./assets/images/icons/ellipse-settings-4.svg" alt="" class="setting-ellips-4">
+            <img src="./assets/images/icons/ellipse-settings-4.svg" alt="" class="ellipse setting-ellips-4">
         </div>
         <div class="position-relative">
             <div class="how-to-set-up-card how-to-set-up-card--last">
@@ -389,7 +656,7 @@
                     Наслаждайтесь просмотром!
                 </div>
             </div>
-            <img src="./assets/images/icons/ellipse-settings-5.svg" alt="" class="setting-ellips-5">
+            <img src="./assets/images/icons/ellipse-settings-5.svg" alt="" class="ellipse setting-ellips-5">
         </div>
 
     </div>
