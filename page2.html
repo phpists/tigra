@@ -36,14 +36,14 @@
             </div>
         </div>
         <div class="header-sidebar-dropdown">
-            <div class="d-flex flex-column gap-2 mb-5">
+            <div class="d-flex flex-column gap-3 mb-5">
                 <div class="header-title">FAQ</div>
                 <div class="header-title">контакты</div>
             </div>
         </div>
         <div class="header-profile-dropdown">
             <div class="mb-5">ID 266568841322</div>
-            <div class="d-flex flex-column gap-2 mb-5">
+            <div class="d-flex flex-column gap-3 mb-5">
                 <a href="#">Настройки</a>
                 <a href="#">Подписка</a>
             </div>
@@ -58,8 +58,12 @@
                     <button class="tab-btn">доступ к плейлисту</button>
                 </a>
                 <button class="tab-btn active">Управление подпиской</button>
-                <button class="tab-btn">Настройки профиля</button>
-                <button class="tab-btn">История платежей</button>
+                <a href="http://test33.phpist.com.ua/tigra/page4.html" class="w-100">
+                    <button class="tab-btn">Настройки профиля</button>
+                </a>
+                <a href="http://test33.phpist.com.ua/tigra/page6.html" class="w-100">
+                    <button class="tab-btn">История платежей</button>
+                </a>
             </div>
             <div class="subscribe-content">
                 <div class="subsribe-plan-card">
@@ -68,20 +72,20 @@
                     <div class="subsribe-plan-period">1 месяц</div>
                     <div class="subsribe-plan-name">vip-пакет все включено</div>
                     <div class="subsribe-plan-price">$4</div>
-                    <button class="button">оформить подписку</button>
+                    <button class="button" id="paySubscribe">оформить подписку</button>
                 </div>
                 <div class="subsribe-plan-card">
                     <div class="subsribe-plan-title">квартальная</div>
                     <div class="subsribe-plan-status">не активна</div>
-                    <div class="subsribe-plan-period">3 месяц</div>
+                    <div class="subsribe-plan-period">3 месяца</div>
                     <div class="subsribe-plan-name">vip-пакет все включено</div>
                     <div class="subsribe-plan-price">$12</div>
-                    <button class="button">оформить подписку</button>
+                    <button class="button" id="paySubscribeError">оформить подписку</button>
                 </div>
                 <div class="subsribe-plan-card">
                     <div class="subsribe-plan-title">Полугодовая</div>
                     <div class="subsribe-plan-status">не активна</div>
-                    <div class="subsribe-plan-period">6 месяц</div>
+                    <div class="subsribe-plan-period">6 месяцев</div>
                     <div class="subsribe-plan-name">vip-пакет все включено</div>
                     <div class="subsribe-plan-price">
                         $21
@@ -92,7 +96,7 @@
                 <div class="subsribe-plan-card">
                     <div class="subsribe-plan-title">Годовая</div>
                     <div class="subsribe-plan-status">не активна</div>
-                    <div class="subsribe-plan-period">12 месяц</div>
+                    <div class="subsribe-plan-period">12 месяцев</div>
                     <div class="subsribe-plan-name">vip-пакет все включено</div>
                     <div class="subsribe-plan-price">
                         $36
@@ -111,6 +115,36 @@
             </div>
         </div>
         <img src="./assets/images/icons/elipse-subscribe-1.svg" class="subscribe-ellipse-1" alt="">
+    </div>
+    <div class="overlay" id="paySubscribeModal">
+        <div class="modal-wrapper">
+            <img src="./assets/images/icons/close.svg" alt="" class="modal-close-icon">
+            <div class="modal-content">
+                <div class="modal-title">Благодарим за подписку!</div>
+                <div class="modal-message">
+                    Ваша проплата прошла успешно. <br><br>
+                    В течении 20 минут вы получите доступ к плейлисту VIP-пакет, ссылкам, медиатеке и настройкам <br>
+                    Ministra Player
+                </div>
+                <a href="#">
+                    <button class="button active">В личный кабинет</button>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="overlay" id="paySubscribeErrorModal">
+        <div class="modal-wrapper">
+            <img src="./assets/images/icons/close.svg" alt="" class="modal-close-icon">
+            <div class="modal-content">
+                <div class="modal-title-error mb-3">ошибка</div>
+                <div class="modal-message mb-5">
+                    Не получилось оплатить :(
+                </div>
+                <a href="#" class="mt-3">
+                    <button class="button active">вернуться В личный кабинет</button>
+                </a>
+            </div>
+        </div>
     </div>
     <footer>
         <div class="wrapper footer">
@@ -154,7 +188,7 @@
         <div class="wrapper d-flex align-items-center justify-content-between mt-3">
             <div>
                 <img src="./assets/images/payment.png" class="footer-image-payment" alt="">
-                <div class="mt-2">Все права защищены © tigra tv 2022 </div>
+                <div class="footer-rights-title">Все права защищены © tigra tv 2022 </div>
             </div>
 
             <div class="footer-mail-btn">

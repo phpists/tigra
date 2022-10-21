@@ -16,7 +16,7 @@
         rel="stylesheet">
 </head>
 
-<body class="subscribe-page-2">
+<body>
     <header class="wrapper position-relative">
         <div class="d-flex align-items-center justify-content-between header">
             <div class="d-flex align-items-center gap-2 header-links">
@@ -51,14 +51,19 @@
             <button class="button">написать в поддержку</button>
         </div>
     </header>
-    <div class="wrapper position-relative subscribe-manage-wrapper">
-        <div class="manage-card">
+    <div class="position-relative">
+        <div class="wrapper manage-card manage-card-payment-history">
             <div class="d-flex align-items-center gap-3 manage-card-nav">
                 <a href="http://test33.phpist.com.ua/tigra/page1.html" class="w-100">
                     <button class="tab-btn">доступ к плейлисту</button>
                 </a>
                 <a href="http://test33.phpist.com.ua/tigra/page2.html" class="w-100">
-                    <button class="tab-btn active">
+                    <button class="tab-btn">
+                        Управление подпиской
+                    </button>
+                </a>
+                <a href="http://test33.phpist.com.ua/tigra/page2.html" class="w-100">
+                    <button class="tab-btn">
                         Управление подпиской
                     </button>
                 </a>
@@ -66,77 +71,46 @@
                     <button class="tab-btn">Настройки профиля</button>
                 </a>
                 <a href="http://test33.phpist.com.ua/tigra/page6.html" class="w-100">
-                    <button class="tab-btn">История платежей</button>
+                    <button class="tab-btn active">История платежей</button>
                 </a>
             </div>
-            <div class="subscribe-content">
-                <div class="h-100 d-flex flex-column">
-                    <div class="subsribe-plan-card">
-                        <div class="subsribe-plan-title">месячная</div>
-                        <div class="subsribe-plan-status">не активна</div>
-                        <div class="subsribe-plan-period">1 месяц</div>
-                        <div class="subsribe-plan-name">vip-пакет все включено</div>
-                        <div class="subsribe-plan-price">$4</div>
-                        <button class="button" disabled>сменить план</button>
+            <div class="payment-history-content">
+                <div>
+                    <div class="payment-history-title">история платежей</div>
+                    <div>
+                        <div class="payment-history-item">
+                            <div>11.08.2022</div>
+                            <div>1 месяц</div>
+                            <div>$4</div>
+                            <div class="active">Активна</div>
+                        </div>
+                        <div class="payment-history-item">
+                            <div>10.07.2022</div>
+                            <div>1 месяц</div>
+                            <div>$4</div>
+                            <div>Не активна</div>
+                        </div>
+                        <div class="payment-history-item">
+                            <div>08.06.2022</div>
+                            <div>1 месяц</div>
+                            <div>$4</div>
+                            <div>Не активна</div>
+                        </div>
+                        <div class="payment-history-item">
+                            <div>03.05.2022</div>
+                            <div>1 месяц</div>
+                            <div>$4</div>
+                            <div>Не активна</div>
+                        </div>
                     </div>
                 </div>
-                <div class="h-100 d-flex flex-column">
-                    <div class="subsribe-plan-card active">
-                        <div class="subsribe-plan-title">квартальная</div>
-                        <div class="subsribe-plan-status active">активна</div>
-                        <div class="subsribe-plan-period">3 месяца</div>
-                        <div class="subsribe-plan-name">vip-пакет все включено</div>
-                        <div class="subsribe-plan-divider"></div>
-                        <div class="subsribe-plan-autopay">
-                            <span>автопродление</span>
-                            <div class="subsribe-plan-toggle">
-                                <div></div>
-                            </div>
-                        </div>
-                        <div class="subsribe-plan-divider"></div>
-                        <div class="subsribe-next-payment-date">
-                            <span>Следущее списание </span>
-                            <div>13.08.2023</div>
-                        </div>
-                        <div class="subsribe-plan-price">$12</div>
-                        <button class="button">продлить подписку</button>
-                    </div>
-                </div>
-                <div class="h-100 d-flex flex-column">
-                    <div class="subsribe-plan-card">
-                        <div class="subsribe-plan-title">Полугодовая</div>
-                        <div class="subsribe-plan-status">не активна</div>
-                        <div class="subsribe-plan-period">6 месяцев</div>
-                        <div class="subsribe-plan-name">vip-пакет все включено</div>
-                        <div class="subsribe-plan-price">
-                            $21
-                            <span>-12,5%</span>
-                        </div>
-                        <button class="button" disabled>сменить план</button>
-                    </div>
-                    <div class="subscribe-promote small">
-                        <button class="button-secondary subscribe-button-promote">купить бессрочно</button>
-                    </div>
-                </div>
-                <div class="h-100 d-flex flex-column">
-                    <div class="subsribe-plan-card">
-                        <div class="subsribe-plan-title">Годовая</div>
-                        <div class="subsribe-plan-status">не активна</div>
-                        <div class="subsribe-plan-period">12 месяцев</div>
-                        <div class="subsribe-plan-name">vip-пакет все включено</div>
-                        <div class="subsribe-plan-price">
-                            $36
-                            <span>-25%</span>
-                        </div>
-                        <button class="button" disabled>сменить план</button>
-                    </div>
-                    <img src="./assets/images/payment.png" class="subscribe-plan-payment-image" alt="">
-                </div>
-
+                <di class="payment-history-image-wrapper">
+                    <div class="payment-history-image"></div>
             </div>
-
         </div>
-        <img src="./assets/images/icons/elipse-subscribe-2.svg" class="subscribe-ellipse-2" alt="">
+    </div>
+    <img src="./assets/images/icons/ellipse-1.svg" class="ellipse-6" alt="">
+    </div>
     </div>
     <footer>
         <div class="wrapper footer">

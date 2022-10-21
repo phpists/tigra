@@ -52,10 +52,30 @@ function handleToggleSubscribeStatus() {
     toggle?.addEventListener("click", () => toggle.classList.toggle("active"))
 }
 
+function handleToggleModal(buttonId, modalId) {
+    const button = document.querySelector(`#${buttonId}`);
+    const modal = document.querySelector(`#${modalId}`);
+    const modalClose = document.querySelector(`#${modalId} .modal-close-icon`);
+
+    button?.addEventListener("click", () => {
+        modal.style.display = "flex"
+    })
+
+    modalClose?.addEventListener("click", () => {
+        modal.style.display = "none"
+    })
+}
+
 document.addEventListener("DOMContentLoaded", function(event) {
     handleToggleProfileDropdown();
     handleTogglePasswordInput();
     handleToggleSidebar();
     handleToggleSubscribeStatus();
+    handleToggleModal("changeLogin", "changeLoginModal");
+    handleToggleModal("changePassword", "changePasswordModal");
+    handleToggleModal("changeEmail", "changeEmailModal");
+    handleToggleModal("changePhone", "changePhoneModal");
+    handleToggleModal("paySubscribe", "paySubscribeModal");
+    handleToggleModal("paySubscribeError", "paySubscribeErrorModal");
   });
 
