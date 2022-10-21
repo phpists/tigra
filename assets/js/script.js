@@ -104,8 +104,16 @@ const handleToggleTabs = () => {
 
 }
 
+const handleParalaps = () => {
+    window.addEventListener("scroll", (e) => {
+        const elipses = document.querySelectorAll(".ellipse");
 
-
+        elipses.forEach((elipse, i) => {
+            const divideNumber = (i % 2 === 0) ? 8 : 5;
+            elipse.style.transform = `translateY(${window.pageYOffset / divideNumber}px)`
+        })
+    })
+}
 
 document.addEventListener("DOMContentLoaded", function(event) {
     handleToggleProfileDropdown();
@@ -119,14 +127,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
     handleToggleModal("paySubscribe", "paySubscribeModal");
     handleToggleModal("paySubscribeError", "paySubscribeErrorModal");
     handleToggleTabs();
-
-    window.addEventListener("scroll", (e) => {
-        const elipses = document.querySelectorAll(".ellipse");
-
-        elipses.forEach((elipse, i) => {
-            const divideNumber = (i % 2 === 0) ? 8 : 5;
-            elipse.style.transform = `translateY(${window.pageYOffset / divideNumber}px)`
-        })
-    })
+    handleParalaps();
   });
 

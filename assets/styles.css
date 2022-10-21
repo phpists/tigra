@@ -1626,6 +1626,10 @@ footer a:hover {
         margin-top: 30px;
         max-width: 90%;
     }
+
+    .setting-ellips-5 {
+        display: none;
+    }
 }
 
 @media(max-width: 1300px) {
