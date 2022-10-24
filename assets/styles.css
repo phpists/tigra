@@ -42,6 +42,10 @@ a:hover {
 
 header {
     z-index: 10;
+    position: fixed;
+    top: -49px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .header {
@@ -50,8 +54,10 @@ header {
     -webkit-backdrop-filter: blur(12.5px);
     border-radius: 40px;
     margin-bottom: 10px;
-    margin-top: 50px;
     padding: 2px 30px;
+    position: relative;
+    top: 80px;
+    height: 86px;
 }
 
 .header-title {
@@ -104,12 +110,12 @@ header {
     -webkit-backdrop-filter: blur(12.5px);
     border-radius: 40px;
     padding: 25px;
+    margin-top: 170px;
 }
 
 .header-profile-dropdown {
     position: absolute;
     right: 0;
-    top: 0;
     padding: 120px 42px 60px;
     z-index: -1;
     border-radius: 40px;
@@ -118,12 +124,12 @@ header {
     -webkit-backdrop-filter: blur(12.5px);
     text-align: center;
     display: none;
+    top: 80px;
 }
 
 .header-sidebar-dropdown {
     position: absolute;
     left: 0;
-    top: 0;
     padding: 120px 20px 60px;
     z-index: -1;
     border-radius: 40px;
@@ -133,6 +139,7 @@ header {
     text-align: center;
     display: none;
     width: 100%;
+    top: 80px;
 }
 
 .header-sidebar-dropdown.active {
@@ -174,8 +181,8 @@ header {
 .header-burger span {
     display: block;
     position: absolute;
-    height: 3px;
-    width: 100%;
+    height: 7px;
+    width: 56px;
     background: radial-gradient(86.82% 87.03% at 6.2% 0%, #FF9000 0%, #FFBF00 100%);
     border-radius: 9px;
     opacity: 1;
@@ -1406,6 +1413,12 @@ footer a:hover {
     margin-bottom: 30px;
 }
 
+.payment-history-item img {
+    height: 25px;
+    width: 25px;
+    display: none;
+}
+
 .payment-history-item .active {
     color: #FF9000;
 }
@@ -1682,6 +1695,11 @@ footer a:hover {
         grid-template-columns: 1fr 1fr;
     }
 
+    .recomendation-card:nth-child(8),
+    .recomendation-card:nth-child(11) {
+        grid-column: 1/3;
+    }
+
     .recomendation-card--empty {
         display: none;
     }
@@ -1689,6 +1707,7 @@ footer a:hover {
     .how-to-set-up-wrapper {
         grid-template-columns: 1fr 1fr;
     }
+
 
     .how-to-set-up-card--empty {
         display: none;
@@ -1716,17 +1735,17 @@ footer a:hover {
     }
 
     .header-logo {
-        width: 55px;
-        height: 55px;
+        width: 88px;
+        height: 88px;
     }
 
     .header-avatar {
-        width: 50px;
-        height: 50px;
+        width: 86px;
+        height: 86px;
     }
 
     .header-avatar img {
-        height: 45px;
+        height: 70px;
     }
 
     .header-burger {
@@ -1744,6 +1763,40 @@ footer a:hover {
     .socmedia-links img {
         width: 36px;
         height: 36px;
+    }
+
+    .manage-card {
+        margin-top: 140px;
+    }
+
+    .header-profile-dropdown {
+        overflow: auto;
+        max-height: 90vh;
+    }
+
+    .header-profile-dropdown,
+    .header-profile-dropdown a,
+    .header-sidebar-dropdown .header-title {
+        font-size: 30px;
+    }
+
+    .header-profile-dropdown button {
+        font-size: 28px;
+        height: auto;
+        max-width: 100%;
+        flex-shrink: 0;
+    }
+
+    .header-profile-dropdown-exist {
+        margin-bottom: 100px;
+    }
+
+    .header-profile-dropdown-id {
+        margin: 100px 0 94px;
+    }
+
+    .header-profile-dropdown-items {
+        margin-bottom: 94px;
     }
 }
 
@@ -1801,7 +1854,15 @@ footer a:hover {
 
     .playlists-manage-item {
         flex-direction: column;
-        text-align: center;
+        text-align: left;
+    }
+
+    .playlists-manage-item div {
+        width: 100%;
+    }
+
+    .playlists-manage-image {
+        margin-bottom: 0;
     }
 
     .playlists-manage-item button {
@@ -1816,9 +1877,18 @@ footer a:hover {
         grid-template-columns: 1fr;
     }
 
+    .recomendation-card:nth-child(8),
+    .recomendation-card:nth-child(11) {
+        grid-column: 1/2;
+    }
+
     .footer {
         grid-template-columns: 1fr;
-        gap: 20px;
+        gap: 0;
+    }
+
+    .law-information {
+        margin-top: 20px;
     }
 
     .footer-links {
@@ -1841,6 +1911,7 @@ footer a:hover {
 
     .payment-history-content {
         padding: 30px 0 0;
+        gap: 0px;
     }
 
     .playlists-manage-wrapper {
@@ -1852,8 +1923,14 @@ footer a:hover {
         margin-bottom: 25px;
     }
 
-    .recomendation-title {
-        word-break: break-all;
+    .recomendation-title,
+    .how-to-set-up,
+    .how-to-set-up-descr {
+        text-align: left;
+    }
+
+    .footer-contacts {
+        line-height: 15%;
     }
 }
 
@@ -1877,9 +1954,37 @@ footer a:hover {
     }
 
     .payment-history-item {
-        grid-template-columns: 1fr 1fr;
         border: 2px solid rgba(58, 66, 71, 0.49);
         border-radius: 25px;
         padding: 10px;
+        gap: 10px;
+        font-size: 10px;
+        align-items: center;
+    }
+
+    .payment-history-item span {
+        display: none;
+    }
+
+    .payment-history-item img {
+        display: block;
+    }
+
+    .header-logo {
+        width: 68px;
+        height: 68px;
+    }
+
+    .header-avatar {
+        width: 66px;
+        height: 66px;
+    }
+
+    .header-avatar img {
+        height: 50px;
+    }
+
+    .header-burger span {
+        width: 35px;
     }
 }

@@ -17,7 +17,7 @@
 </head>
 
 <body>
-    <header class="wrapper position-relative">
+    <header class="wrapper">
         <div class="d-flex align-items-center justify-content-between header">
             <div class="d-flex align-items-center gap-2 header-links">
                 <div class="header-title">FAQ</div>
@@ -42,12 +42,12 @@
             </div>
         </div>
         <div class="header-profile-dropdown">
-            <div class="mb-5">ID 266568841322</div>
-            <div class="d-flex flex-column gap-3 mb-5">
+            <div class="mb-5 header-profile-dropdown-id">ID 266568841322</div>
+            <div class="d-flex flex-column gap-3 mb-5 header-profile-dropdown-items">
                 <a href="#">Настройки</a>
                 <a href="#">Подписка</a>
             </div>
-            <div class="mb-5">Выход</div>
+            <div class="mb-5 header-profile-dropdown-exist">Выход</div>
             <button class="button">написать в поддержку</button>
         </div>
     </header>
@@ -169,7 +169,7 @@
                 <div class=" subscribe-content">
                     <div class="subsribe-plan-card">
                         <div class="subsribe-plan-title">месячная</div>
-                        <div class="subsribe-plan-status">не активна</div>
+                        <div class="subsribe-plan-status"></div>
                         <div class="subsribe-plan-period">1 месяц</div>
                         <div class="subsribe-plan-name">vip-пакет все включено</div>
                         <div class="subsribe-plan-price">$4</div>
@@ -212,7 +212,7 @@
                         <div class="subscribe-promote-title">или купите один <br> раз и навсегда</div>
                         <button class="button-secondary subscribe-button-promote">купить бессрочно</button>
                     </div>
-                    <img src="./assets/images/payment.png" alt="">
+                    <img src="./assets/images/payment.svg" alt="">
                 </div>
             </div>
             <!-- END PAGE 2 -->
@@ -279,7 +279,7 @@
                             </div>
                             <button class="button" disabled>сменить план</button>
                         </div>
-                        <img src="./assets/images/payment.png" class="subscribe-plan-payment-image" alt="">
+                        <img src="./assets/images/payment.svg" class="subscribe-plan-payment-image" alt="">
                     </div>
 
                 </div>
@@ -380,25 +380,37 @@
                                 <div>11.08.2022</div>
                                 <div>1 месяц</div>
                                 <div>$4</div>
-                                <div class="active">Активна</div>
+                                <div class="active">
+                                    <span>Активна</span>
+                                    <img src="./assets/images/icons/active.svg" alt="">
+                                </div>
                             </div>
                             <div class="payment-history-item">
                                 <div>10.07.2022</div>
                                 <div>1 месяц</div>
                                 <div>$4</div>
-                                <div>Не активна</div>
+                                <div>
+                                    <span>Не активна</span>
+                                    <img src="./assets/images/icons/not-active.svg" alt="">
+                                </div>
                             </div>
                             <div class="payment-history-item">
                                 <div>08.06.2022</div>
                                 <div>1 месяц</div>
                                 <div>$4</div>
-                                <div>Не активна</div>
+                                <div>
+                                    <span>Не активна</span>
+                                    <img src="./assets/images/icons/not-active.svg" alt="">
+                                </div>
                             </div>
                             <div class="payment-history-item">
                                 <div>03.05.2022</div>
                                 <div>1 месяц</div>
                                 <div>$4</div>
-                                <div>Не активна</div>
+                                <div>
+                                    <span>Не активна</span>
+                                    <img src="./assets/images/icons/not-active.svg" alt="">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -522,11 +534,11 @@
             <div class="recomendation-card-content">
                 <div class="d-flex align-items-center justify-content-start">
                     <div class="recomendation-card-icon">
-                        <img src="./assets/images/icons/recomend-2.svg" alt="">
+                        <img src="./assets/images/icons/recomend-3.svg" alt="">
                     </div>
                 </div>
                 <div class="recomendation-card-title">
-                    Apple TV
+                    Android TV
                 </div>
             </div>
         </div>
@@ -586,6 +598,29 @@
             <div class="recomendation-card-info">
                 <div class="d-flex align-items-center justify-content-center">
                     <div class="recomendation-card-icon">
+                        <img src="./assets/images/icons/recomend-8.svg" alt="">
+                    </div>
+                </div>
+                <div class="recomendation-card-links">
+                    <a href="#" target="_blank">XMMS</a>
+                    <a href="#" target="_blank">VLC</a>
+                </div>
+            </div>
+            <div class="recomendation-card-content">
+                <div class="d-flex align-items-center justify-content-start">
+                    <div class="recomendation-card-icon">
+                        <img src="./assets/images/icons/recomend-8.svg" alt="">
+                    </div>
+                </div>
+                <div class="recomendation-card-title">
+                    Linux
+                </div>
+            </div>
+        </div>
+        <div class="recomendation-card">
+            <div class="recomendation-card-info">
+                <div class="d-flex align-items-center justify-content-center">
+                    <div class="recomendation-card-icon">
                         <img src="./assets/images/icons/recomend-7.svg" alt="">
                     </div>
                 </div>
@@ -612,29 +647,6 @@
                 </div>
                 <div class="recomendation-card-title">
                     MacOS
-                </div>
-            </div>
-        </div>
-        <div class="recomendation-card">
-            <div class="recomendation-card-info">
-                <div class="d-flex align-items-center justify-content-center">
-                    <div class="recomendation-card-icon">
-                        <img src="./assets/images/icons/recomend-8.svg" alt="">
-                    </div>
-                </div>
-                <div class="recomendation-card-links">
-                    <a href="#" target="_blank">XMMS</a>
-                    <a href="#" target="_blank">VLC</a>
-                </div>
-            </div>
-            <div class="recomendation-card-content">
-                <div class="d-flex align-items-center justify-content-start">
-                    <div class="recomendation-card-icon">
-                        <img src="./assets/images/icons/recomend-8.svg" alt="">
-                    </div>
-                </div>
-                <div class="recomendation-card-title">
-                    Linux
                 </div>
             </div>
         </div>
@@ -848,7 +860,7 @@
     <footer>
         <div class="wrapper footer">
             <div class="d-flex flex-column justify-content-between align-items-start footer-section">
-                <div>
+                <div class="law-information">
                     <a href="#">Юридическая информация</a>
                 </div>
             </div>
@@ -877,7 +889,7 @@
                 </div>
             </div>
             <div class="d-flex flex-column justify-content-between align-items-end footer-section">
-                <div>
+                <div class="footer-contacts">
                     <a href="mailto:iptvtigra@gmail.com" target="_blank">iptvtigra@gmail.com</a>
                     <br><br>
                     <a href="tel:+79182885281">тел. +79182885281</a>
@@ -886,7 +898,7 @@
         </div>
         <div class="wrapper d-flex align-items-center justify-content-between mt-3">
             <div>
-                <img src="./assets/images/payment.png" class="footer-image-payment" alt="">
+                <img src="./assets/images/payment.svg" class="footer-image-payment" alt="">
                 <div class="footer-rights-title">Все права защищены © tigra tv 2022 </div>
             </div>
 
