@@ -1724,6 +1724,37 @@ footer a:hover {
 }
 
 @media(max-width: 780px) {
+    .header-profile-dropdown {
+        overflow-y: auto;
+        overflow-x: hidden;
+        max-height: 90vh;
+    }
+
+    .header-profile-dropdown,
+    .header-profile-dropdown a,
+    .header-sidebar-dropdown .header-title {
+        font-size: 30px;
+    }
+
+    .header-profile-dropdown button {
+        font-size: 28px;
+        height: auto;
+        max-width: 100%;
+        flex-shrink: 0;
+    }
+
+    .header-profile-dropdown-exist {
+        margin-bottom: 100px;
+    }
+
+    .header-profile-dropdown-id {
+        margin: 100px 0 94px;
+    }
+
+    .header-profile-dropdown-items {
+        margin-bottom: 94px;
+    }
+
     .footer {
         grid-template-columns: 1fr 1fr;
         gap: 20px;
@@ -1767,36 +1798,6 @@ footer a:hover {
 
     .manage-card {
         margin-top: 140px;
-    }
-
-    .header-profile-dropdown {
-        overflow: auto;
-        max-height: 90vh;
-    }
-
-    .header-profile-dropdown,
-    .header-profile-dropdown a,
-    .header-sidebar-dropdown .header-title {
-        font-size: 30px;
-    }
-
-    .header-profile-dropdown button {
-        font-size: 28px;
-        height: auto;
-        max-width: 100%;
-        flex-shrink: 0;
-    }
-
-    .header-profile-dropdown-exist {
-        margin-bottom: 100px;
-    }
-
-    .header-profile-dropdown-id {
-        margin: 100px 0 94px;
-    }
-
-    .header-profile-dropdown-items {
-        margin-bottom: 94px;
     }
 }
 
