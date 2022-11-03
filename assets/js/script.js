@@ -4,11 +4,14 @@ function handleToggleProfileDropdown() {
     const profileAvatar = document.querySelector(".header-avatar");
     const sidebar = document?.querySelector(".header-sidebar-dropdown");
     const btnSidebar = document?.querySelector(".header-burger");
+    const overlay = document.querySelector(".overlay-header");
 
     profileAvatar?.addEventListener("click", function() {
         sidebar.classList.remove("active");
         btnSidebar.classList.remove("open");
         dropdown.classList.toggle("active")
+        dropdown.classList.contains("active") ? overlay.classList.add("active") : overlay.classList.remove("active");
+
     })
 }
 
@@ -39,10 +42,14 @@ function handleToggleSidebar() {
     const btn = document?.querySelector(".header-burger");
     const sidebar = document?.querySelector(".header-sidebar-dropdown");
     const profileDropdown = document.querySelector(".header-profile-dropdown");
+    const overlay = document.querySelector(".overlay-header");
+    
     btn.addEventListener('click', () => {
         btn.classList.toggle("open");
         sidebar.classList.toggle("active");
         profileDropdown.classList.remove("active");
+        sidebar.classList.contains("active") ? overlay.classList.add("active") : overlay.classList.remove("active");
+
     })
 
 }
@@ -71,7 +78,7 @@ const handleToggleTabs = () => {
     const tabs = document.querySelectorAll(".tab-page")
     const elipse = document.querySelector(".manage-ellipse");
     const ELIPSE_MENAGE_CARD_CLASSES = {
-        "1": "subscribe-ellipse-1",
+        "1": "ellipse-1",
         "2": "ellipse-2",
         "3": "ellipse-4",
         "4": "ellipse-6",
@@ -81,24 +88,26 @@ const handleToggleTabs = () => {
         button?.addEventListener("click", (e) => {
             const currentButton = e.target;
             const selectedPage = currentButton.getAttribute("data-page");
-            
-            // toggle active btn
-            tabButtons.forEach(btn => {
-                btn.getAttribute("data-page") === selectedPage 
-                ?  btn.classList.add("active")
-                : btn.classList.remove("active")
-            })
 
-            // toggle active tab
-            tabs.forEach(tab => {
-                tab.getAttribute("data-page") === selectedPage 
-                ?  tab.classList.add("active")
-                : tab.classList.remove("active")
-            })
+            if(selectedPage) {
+                // toggle active btn
+                tabButtons.forEach(btn => {
+                    btn.getAttribute("data-page") === selectedPage 
+                    ?  btn.classList.add("active")
+                    : btn.classList.remove("active")
+                })
 
-            console.log(ELIPSE_MENAGE_CARD_CLASSES[selectedPage])
-            //togle elipse 
-            elipse.className = `manage-ellipse ellipse ${ELIPSE_MENAGE_CARD_CLASSES[selectedPage]}`
+                // toggle active tab
+                tabs.forEach(tab => {
+                    tab.getAttribute("data-page") === selectedPage 
+                    ?  tab.classList.add("active")
+                    : tab.classList.remove("active")
+                })
+
+                console.log(ELIPSE_MENAGE_CARD_CLASSES[selectedPage])
+                //togle elipse 
+                elipse.className = `manage-ellipse ellipse ${ELIPSE_MENAGE_CARD_CLASSES[selectedPage]}`
+            }
         })
     })
 
@@ -109,8 +118,23 @@ const handleParalaps = () => {
         const elipses = document.querySelectorAll(".ellipse");
 
         elipses.forEach((elipse, i) => {
-            const divideNumber = (i % 2 === 0) ? 8 : 5;
-            elipse.style.transform = `translateY(${window.pageYOffset / divideNumber}px)`
+            const divideNumber = (i % 2 === 0) ? 10 : 15;
+
+            if(elipse.classList.contains("ellipse-1")) {
+                elipse.style.zIndex = (window.pageYOffset / 15) > 35 ? "-1" : "2";
+            }
+
+            if(elipse.classList.contains("setting-ellips-1")) {
+                elipse.style.transform = `translateY(${window.pageYOffset / 15}px)`;
+            } else if(elipse.classList.contains("setting-ellips-2")) {
+                elipse.style.transform = `translateY(${window.pageYOffset / 18}px)`
+            } else if(elipse.classList.contains("setting-ellips-3")) {
+                elipse.style.transform = `translateY(${window.pageYOffset / 15}px)`
+            } else if(elipse.classList.contains("setting-ellips-4")) {
+                elipse.style.transform = `translateY(${window.pageYOffset / 6}px)`
+            } else {
+                elipse.style.transform = `translateY(${window.pageYOffset / divideNumber}px)`
+            }
         })
     })
 }

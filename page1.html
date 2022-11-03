@@ -20,25 +20,38 @@
     <header class="wrapper">
         <div class="d-flex align-items-center justify-content-between header">
             <div class="d-flex align-items-center gap-2 header-links">
-                <div class="header-title">FAQ</div>
-                <div class="header-title">контакты</div>
+                <a href="http://tigra.tv/#FAQ" target="_blank" class="header-title">FAQ</a>
+                <a href="http://tigra.tv/#contacts" target="_blank" class="header-title">контакты</a>
             </div>
             <div class="header-burger">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
-            <div class="header-logo d-flex align-items-center justify-content-center">
+            <a href="#" class="header-logo d-flex align-items-center justify-content-center">
                 <img src="./assets/images/Logo.svg" alt="">
-            </div>
+            </a>
+            <!-- ЯКЩО НЕ ЗАЛОГІНЕНИЙ -->
+            <!-- <div class="header-not-auth">
+                <a href="#" class="header-title login">вход</a>
+                <a href="#">
+                    <button class="button active registration-btn">
+                        <span>Регистрация</span>
+                        <img src="./assets/images/icons/registration-arrow.svg" alt="">
+                    </button>
+                </a>
+            </div> -->
+
+            <!-- ЯКЩО ЗАЛОГІНЕНИЙ  -->
+
             <div class="header-avatar d-flex align-items-center justify-content-center">
                 <img src="./assets/images/avatar.png" alt="">
             </div>
         </div>
         <div class="header-sidebar-dropdown">
             <div class="d-flex flex-column gap-3 mb-5">
-                <div class="header-title">FAQ</div>
-                <div class="header-title">контакты</div>
+                <a href="http://tigra.tv/#FAQ" target="_blank" class="header-title faq-link">FAQ</a>
+                <a href="http://tigra.tv/#contacts" target="_blank" class="header-title">контакты</a>
             </div>
         </div>
         <div class="header-profile-dropdown">
@@ -51,8 +64,25 @@
             <button class="button">написать в поддержку</button>
         </div>
     </header>
+    <div class="overlay-header"></div>
     <div class="position-relative">
         <div class="wrapper manage-card">
+            <!-- <div class="d-flex align-items-center gap-3 manage-card-nav">
+                <a href="#" class="w-100">
+                    <button class="tab-btn active">доступ к плейлисту</button>
+                </a>
+                <a href="#" class="w-100">
+                    <button class="tab-btn">
+                        Управление подпиской
+                    </button>
+                </a>
+                <a href="#" class="w-100">
+                    <button class="tab-btn">Настройки профиля</button>
+                </a>
+                <a href="#" class="w-100">
+                    <button class="tab-btn">История платежей</button>
+                </a>
+            </div> -->
             <div class="d-flex align-items-center gap-3 manage-card-nav">
                 <button class="tab-btn active" data-page="1">доступ к плейлисту</button>
                 <button class="tab-btn" data-page="2">
@@ -169,7 +199,7 @@
                 <div class=" subscribe-content">
                     <div class="subsribe-plan-card">
                         <div class="subsribe-plan-title">месячная</div>
-                        <div class="subsribe-plan-status"></div>
+                        <div class="subsribe-plan-status">не активна</div>
                         <div class="subsribe-plan-period">1 месяц</div>
                         <div class="subsribe-plan-name">vip-пакет все включено</div>
                         <div class="subsribe-plan-price">$4</div>
@@ -226,7 +256,7 @@
                             <div class="subsribe-plan-period">1 месяц</div>
                             <div class="subsribe-plan-name">vip-пакет все включено</div>
                             <div class="subsribe-plan-price">$4</div>
-                            <button class="button" disabled>сменить план</button>
+                            <button class="button changePlan button--grey">сменить план</button>
                         </div>
                     </div>
                     <div class="h-100 d-flex flex-column">
@@ -261,7 +291,7 @@
                                 $21
                                 <span>-12,5%</span>
                             </div>
-                            <button class="button" disabled>сменить план</button>
+                            <button class="button button--grey">сменить план</button>
                         </div>
                         <div class="subscribe-promote small">
                             <button class="button-secondary subscribe-button-promote">купить бессрочно</button>
@@ -277,7 +307,7 @@
                                 $36
                                 <span>-25%</span>
                             </div>
-                            <button class="button" disabled>сменить план</button>
+                            <button class="button button--grey">сменить план</button>
                         </div>
                         <img src="./assets/images/payment.svg" class="subscribe-plan-payment-image" alt="">
                     </div>
@@ -421,16 +451,15 @@
             <!-- END PAGE 4 -->
 
         </div>
-        <img src="./assets/images/icons/ellipse-1.svg" class="manage-ellipse ellipse ellipse-1" alt="">
-
     </div>
+    <img src="./assets/images/icons/ellipse-1.svg" class="manage-ellipse ellipse ellipse-1" alt="">
     </div>
     <div class="wrapper recomendation-title">
         рекомендуемые приложения для просмотра
     </div>
     <div class="wrapper position-relative recomendation-wrapper">
         <img src="./assets/images/icons/ellipse-recomend-2.svg" alt="" class="ellipse recomendation-elip-2">
-        <div class="position-relative recomendation-card--info">
+        <a class="position-relative recomendation-card--info" href="https://ottplayer.tv/" target="_blank">
             <div class="recomendation-card">
                 <div class="d-flex align-items-center justify-content-start">
                     <div class="recomendation-card-icon">
@@ -444,7 +473,7 @@
                 </div>
             </div>
             <img src="./assets/images/icons/ellipse-recomend-1.svg" alt="" class=" ellipse recomendation-elip-1">
-        </div>
+        </a>
         <div class="recomendation-card">
             <div class="recomendation-card-info">
                 <div class="d-flex align-items-center justify-content-center">
@@ -859,9 +888,19 @@
     <!-- END MODALS -->
     <footer>
         <div class="wrapper footer">
-            <div class="d-flex flex-column justify-content-between align-items-start footer-section">
-                <div class="law-information">
+            <div class="d-flex flex-column align-items-start footer-section footer-section--contacts">
+                <div class="law-information law-information-title">
+                    <a href="#">Все права защищены © tigra tv 2022 </a>
+                </div>
+                <div class="law-information d-flex align-items-center mb-1">
                     <a href="#">Юридическая информация</a>
+                    <div class="law-badge"></div>
+                </div>
+                <div class="law-information mb-1">
+                    <a href="#">Политика конфиденциальности</a>
+                </div>
+                <div class="law-information mb-1">
+                    <a href="#">Пользовательское соглашение</a>
                 </div>
             </div>
             <div class="footer-links">
@@ -885,7 +924,7 @@
                 </div>
                 <div class="d-flex flex-column align-items-center justify-content-between">
                     <a href="#" target="_blank" class="mb-2">Главная</a>
-                    <a href="#" target="_blank">FAQ</a>
+                    <a href="http://tigra.tv/#FAQ" target="_blank">FAQ</a>
                 </div>
             </div>
             <div class="d-flex flex-column justify-content-between align-items-end footer-section">
@@ -896,12 +935,11 @@
                 </div>
             </div>
         </div>
-        <div class="wrapper d-flex align-items-center justify-content-between mt-3">
+        <div class="wrapper footer-images d-flex align-items-center justify-content-between mt-3">
             <div>
                 <img src="./assets/images/payment.svg" class="footer-image-payment" alt="">
-                <div class="footer-rights-title">Все права защищены © tigra tv 2022 </div>
             </div>
-
+            <img src="./assets/images/studio-logo.png" alt="">
             <div class="footer-mail-btn">
                 <img src="./assets/images/icons/mail.svg" alt="">
             </div>
