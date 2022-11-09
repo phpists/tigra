@@ -2,11 +2,11 @@
 <path d="M15.9364 221.502C26.1637 241.939 40.9474 251.162 58.0949 252.632C75.1465 254.094 94.3984 247.878 113.655 237.788C152.185 217.6 191.243 181.629 213.759 158.863C236.503 135.866 241.009 111.773 235.327 89.0565C229.665 66.4254 213.921 45.2586 196.37 27.9005C160.974 -7.10679 90.2384 -11.0341 44.8557 34.8531C22.1639 57.7972 8.31304 91.2051 3.43379 125.45C-1.44517 159.692 2.62709 194.906 15.9364 221.502Z" fill="url(#paint0_radial_293_6327)" stroke="url(#paint1_radial_293_6327)" stroke-width="2"/>
 <defs>
 <radialGradient id="paint0_radial_293_6327" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(132.306 -34.0524) rotate(97.1235) scale(292.374 196.34)">
-<stop stop-color="#FF9000"/>
+<stop stop-color="#FDA428"/>
 <stop offset="1" stop-color="#FFBF00"/>
 </radialGradient>
 <radialGradient id="paint1_radial_293_6327" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(132.306 -34.0524) rotate(97.1235) scale(292.374 196.34)">
-<stop stop-color="#FF9000"/>
+<stop stop-color="#FDA428"/>
 <stop offset="1" stop-color="#FFBF00"/>
 </radialGradient>
 </defs>

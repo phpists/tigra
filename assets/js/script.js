@@ -1,6 +1,8 @@
 
 function handleToggleProfileDropdown() {
   const dropdown = document.querySelector(".header-profile-dropdown");
+  const dropdownLinks = document.querySelectorAll(".header-profile-dropdown a");
+  const dropdownBtn = document.querySelector(".header-profile-dropdown button");
   const profileAvatar = document.querySelector(".header-avatar");
   const sidebar = document?.querySelector(".header-sidebar-dropdown");
   const btnSidebar = document?.querySelector(".header-burger");
@@ -22,9 +24,23 @@ function handleToggleProfileDropdown() {
 
   })
 
+  dropdownLinks?.forEach(link => {
+    link.addEventListener("click", () => {
+      btnSidebar.classList.remove("open");
+      dropdown.classList.remove("active");
+      overlay.classList.remove("active");
+    })
+  })
+
+  dropdownBtn.addEventListener("click", () => {
+    btnSidebar.classList.remove("open");
+    dropdown.classList.remove("active");
+    overlay.classList.remove("active");
+  })
+
   window.addEventListener("scroll", () => {
     const viewportOffset = document.body.getBoundingClientRect();
-    if (currentOffsetTop && ((viewportOffset.top + 200) < currentOffsetTop)) {
+    if (currentOffsetTop && ((viewportOffset.top + 50) < currentOffsetTop)) {
       btnSidebar.classList.remove("open");
       dropdown.classList.remove("active");
       overlay.classList.remove("active");
@@ -59,6 +75,7 @@ function handleTogglePasswordInput() {
 function handleToggleSidebar() {
   const btn = document?.querySelector(".header-burger");
   const sidebar = document?.querySelector(".header-sidebar-dropdown");
+  const sidebarLinks = document?.querySelectorAll(".header-sidebar-dropdown a");
   const profileDropdown = document.querySelector(".header-profile-dropdown");
   const overlay = document.querySelector(".overlay-header");
   let currentOffsetTop;
@@ -77,9 +94,18 @@ function handleToggleSidebar() {
     }
   })
 
+  sidebarLinks.forEach(link => {
+
+    link.addEventListener("click", () => {
+      btn.classList.remove("open");
+      overlay.classList.remove("active");
+      sidebar.classList.remove("active");
+    })
+  })
+
   window.addEventListener("scroll", () => {
     const viewportOffset = document.body.getBoundingClientRect();
-    if (currentOffsetTop && (((viewportOffset.top + 200) < currentOffsetTop))) {
+    if (currentOffsetTop && (((viewportOffset.top + 50) < currentOffsetTop))) {
       btn.classList.remove("open");
       sidebar.classList.remove("active");
       overlay.classList.remove("active");
@@ -179,6 +205,18 @@ const handleParalaps = () => {
   })
 }
 
+
+const handleScrollToFooter = () => {
+  const links = document.querySelectorAll(".contactsLink");
+
+  links?.forEach(link => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+    })
+  })
+}
+
 document.addEventListener("DOMContentLoaded", function (event) {
   handleToggleProfileDropdown();
   handleTogglePasswordInput();
@@ -192,5 +230,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
   handleToggleModal("paySubscribeError", "paySubscribeErrorModal");
   handleToggleTabs();
   handleParalaps();
+  handleScrollToFooter();
 });
 

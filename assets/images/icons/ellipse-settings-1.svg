@@ -2,11 +2,11 @@
 <path d="M200.607 30.5437C192.118 12.0624 179.267 3.34631 164.094 1.42926C149.015 -0.475973 131.779 4.3508 114.448 12.5988C79.7682 29.1025 44.1839 59.5595 23.619 78.9082C2.81432 98.4826 -1.86221 119.688 2.53609 140.034C6.91563 160.294 20.2673 179.605 35.3151 195.599C42.9212 203.683 56.7268 213.343 73.7257 222.672C90.7458 232.012 111.043 241.062 131.692 247.903C152.334 254.741 173.373 259.387 191.863 259.884C210.328 260.381 226.431 256.745 236.989 246.811C247.556 236.868 251.795 221.232 252 202.863C252.205 184.472 248.371 163.155 242.583 141.619C231.005 98.5388 211.547 54.3623 200.607 30.5437Z" fill="url(#paint0_radial_283_6420)" stroke="url(#paint1_radial_283_6420)" stroke-width="2"/>
 <defs>
 <radialGradient id="paint0_radial_283_6420" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(144.296 309.97) rotate(-91.7996) scale(308.7 212.857)">
-<stop stop-color="#FF9000"/>
+<stop stop-color="#FDA428"/>
 <stop offset="1" stop-color="#FFBF00"/>
 </radialGradient>
 <radialGradient id="paint1_radial_283_6420" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(144.296 309.97) rotate(-91.7996) scale(308.7 212.857)">
-<stop stop-color="#FF9000"/>
+<stop stop-color="#FDA428"/>
 <stop offset="1" stop-color="#FFBF00"/>
 </radialGradient>
 </defs>
