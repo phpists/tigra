@@ -1,4 +1,18 @@
 
+function handleonClickOnOverlay() {
+  const overlay = document.querySelector(".overlay-header");
+  const dropdown = document.querySelector(".header-profile-dropdown");
+  const burger = document?.querySelector(".header-burger");
+  const sidebar = document?.querySelector(".header-sidebar-dropdown");
+
+  overlay.addEventListener("click", function () {
+    burger.classList.remove("open");
+    sidebar.classList.remove("active");
+    dropdown.classList.remove("active");
+    overlay.classList.remove("active");
+  })
+}
+
 function handleToggleProfileDropdown() {
   const dropdown = document.querySelector(".header-profile-dropdown");
   const dropdownLinks = document.querySelectorAll(".header-profile-dropdown a");
@@ -32,7 +46,7 @@ function handleToggleProfileDropdown() {
     })
   })
 
-  dropdownBtn.addEventListener("click", () => {
+  dropdownBtn?.addEventListener("click", () => {
     btnSidebar.classList.remove("open");
     dropdown.classList.remove("active");
     overlay.classList.remove("active");
@@ -80,7 +94,7 @@ function handleToggleSidebar() {
   const overlay = document.querySelector(".overlay-header");
   let currentOffsetTop;
 
-  btn.addEventListener('click', () => {
+  btn?.addEventListener('click', () => {
     const viewportOffset = document.body.getBoundingClientRect();
     currentOffsetTop = viewportOffset.top;
     btn.classList.toggle("open");
@@ -96,7 +110,7 @@ function handleToggleSidebar() {
 
   sidebarLinks.forEach(link => {
 
-    link.addEventListener("click", () => {
+    link?.addEventListener("click", () => {
       btn.classList.remove("open");
       overlay.classList.remove("active");
       sidebar.classList.remove("active");
@@ -193,11 +207,11 @@ const handleParalaps = () => {
         elipse.style.transform = `translateY(${window.pageYOffset / 5}px)`;
         elipse.style.display = scrolled > 80 ? "none" : "block";
       } else if (elipse.classList.contains("setting-ellips-4")) {
-        elipse.style.transform = `translateY(-${window.pageYOffset / 15}px)`;
+        elipse.style.transform = `translateY(-${window.pageYOffset / 65}px)`;
       } else if (elipse.classList.contains("recomendation-elip-2")) {
-        elipse.style.transform = `translateY(-${window.pageYOffset / 3}px)`
+        elipse.style.transform = `translateY(-${window.pageYOffset / 10}px)`
       } else if (elipse.classList.contains("recomendation-elip-1")) {
-        elipse.style.transform = `translateY(${window.pageYOffset / 4}px)`
+        elipse.style.transform = `translateY(${window.pageYOffset / 30}px)`
       } else {
         elipse.style.transform = `translateY(-${window.pageYOffset / 10}px)`
       }
@@ -231,5 +245,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
   handleToggleTabs();
   handleParalaps();
   handleScrollToFooter();
+  handleonClickOnOverlay();
 });
 

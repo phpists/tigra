@@ -122,8 +122,12 @@ header {
   backdrop-filter: blur(12.5px);
   -webkit-backdrop-filter: blur(12.5px);
   border-radius: 40px;
-  padding: 25px;
+  padding: 0px;
   margin-top: 127px;
+}
+
+.manage-card-nav {
+  padding: 25px;
 }
 
 .header-profile-dropdown {
@@ -288,6 +292,13 @@ header {
   cursor: pointer;
   border-radius: 25px;
   text-align: center;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 150%;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .tab-btn:hover {
@@ -342,6 +353,11 @@ header {
   background: #FDA428;
 }
 
+.button.copied {
+  background: radial-gradient(86.82% 87.03% at 6.2% 0%, #FF9000 0%, #FFBF00 100%);
+  color: #32393F;
+}
+
 .button--grey {
   background: #474E54;
   font-weight: 700 !important;
@@ -360,7 +376,7 @@ button[disabled] {
 }
 
 .playlists-manage-wrapper {
-  padding: 0 100px 0 70px;
+  padding: 0 95px 95px;
   display: flex;
 }
 
@@ -388,6 +404,7 @@ button[disabled] {
   align-items: flex-end;
   justify-content: start;
   margin-bottom: 30px;
+  width: 465px !important;
 }
 
 .playlists-manage-image img {
@@ -646,7 +663,7 @@ button[disabled] {
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
-  color: #5A6C76;
+  color: #BBBFC1;
   margin-bottom: 80px;
 }
 
@@ -816,7 +833,7 @@ footer a {
 }
 
 .footer-support-btn {
-  width: 100% !important;
+  width: 255px !important;
   height: 55px;
   max-width: 100%;
   color: #fda428;
@@ -934,11 +951,16 @@ footer a {
   cursor: pointer;
 }
 
+
 .input-toggle-icon {
   position: absolute;
   right: 25px;
   top: 50%;
   transform: translateY(-60%);
+}
+
+.input.error .input-toggle-icon {
+  transform: translateY(-90%);
 }
 
 .input-show {
@@ -963,7 +985,18 @@ footer a {
   border-radius: 22px;
 }
 
-.button-secondary:hover {
+.button-secondary--grey {
+  background: #474E54 !important;
+  font-weight: 700 !important;
+  font-size: 12px !important;
+  line-height: 150% !important;
+  text-transform: uppercase;
+  color: #BBBFC1;
+}
+
+
+.button-secondary:hover,
+.button-secondary--grey:hover {
   background: radial-gradient(86.82% 87.03% at 6.2% 0%, #FDA428 0%, #FFBF00 100%);
 }
 
@@ -1073,7 +1106,7 @@ footer a {
 
 .subsribe-plan-card.active {
   background: #2A3035;
-  height: 94%;
+  height: 100%;
 }
 
 .subsribe-plan-title {
@@ -1178,10 +1211,16 @@ footer a {
 }
 
 .subscribe-promote.small {
-  padding: 38px 40px;
+  padding: 10px 40px;
   width: auto;
   margin-top: 10px;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
+}
+
+.subscribe-promote.small .subsribe-plan-price {
+  margin-bottom: 0 !important;
 }
 
 .subscribe-promote.small button {
@@ -1285,7 +1324,7 @@ footer a {
 }
 
 .subscribe-plan-payment-image {
-  margin: 50px auto;
+  margin: 50px auto 0;
   display: block;
   width: 163px;
 }
@@ -1456,8 +1495,8 @@ footer a {
 /* PAYMENT HISTORY*/
 .payment-history-content {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: 100px 70px 70px;
+  grid-template-columns: 1fr max-content;
+  padding: 100px 95px 95px;
   align-items: center;
   gap: 50px;
 }
@@ -1517,9 +1556,9 @@ footer a {
 
 .payment-history-image {
   background: url("./images/image2.png") center center/cover no-repeat;
+  border-radius: 40px;
   width: 465px;
   height: 347px;
-  border-radius: 40px
 }
 
 .manage-card-payment-history {
@@ -1783,9 +1822,12 @@ footer a {
 
 
 .studio-logo {
-  height: 45px;
+  height: 35px;
 }
 
+.studio-logo-by {
+  position: absolute;
+}
 
 .footer-contacts {
   text-align: right;
@@ -1798,6 +1840,71 @@ footer a {
 
 .law-information br {
   display: none;
+}
+
+.subscribe-sale-wrapper {
+  background: radial-gradient(151.64% 120.36% at 47.19% -0.63%, #2D3337 0%, rgba(58, 66, 71, 0.49) 100%);
+  backdrop-filter: blur(12.5px);
+  border-radius: 40px;
+  padding: 25px;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  transition: all .3s ease;
+  border: 1px solid transparent;
+}
+
+.subscribe-sale-wrapper:hover {
+  border: 1px solid #FDA428;
+
+}
+
+.subscribe-sale-wrapper img {
+  width: 288px;
+}
+
+.subscribe-sale-title {
+  font-family: 'Soyuz Grotesk';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: #BBDCFF;
+}
+
+.subscribe-sale-title span {
+  font-family: 'Open Sans';
+}
+
+.subscribe-sale-procent {
+  font-family: 'Soyuz Grotesk', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FF9000;
+  opacity: 0.8;
+  background: #32393F;
+  backdrop-filter: blur(12.5px);
+  border-radius: 25px;
+  border: #98989833 3px solid;
+  padding: 0 32px 10px;
+  height: 106px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.subscribe-sale-procent span {
+  font-family: 'Open Sans';
+  font-size: 30px;
+  line-height: 0;
 }
 
 /* RESPONSIVE */
@@ -1813,6 +1920,10 @@ footer a {
   .subscribe-promote {
     width: 100%;
     margin-bottom: 20px;
+  }
+
+  .subscribe-plan-payment-image {
+    margin: 50px auto;
   }
 
   .subsribe-plan-card {
@@ -1849,6 +1960,10 @@ footer a {
     max-width: 100%;
     margin: 0 auto;
   }
+
+  .subscribe-sale-wrapper img {
+    width: 25%;
+  }
 }
 
 @media(max-width: 1050px) {
@@ -1865,6 +1980,10 @@ footer a {
   .ellipse-4 {
     display: none;
   }
+
+  .subscribe-sale-wrapper img {
+    width: 20%;
+  }
 }
 
 @media(max-width: 1300px) {
@@ -1876,7 +1995,7 @@ footer a {
 @media(min-width: 1200px) {
   .studio-logo {
     position: absolute;
-    left: 50%;
+    left: 48.5%;
     top: 50%;
     transform: translate(-50%, -50%);
   }
@@ -1959,7 +2078,30 @@ footer a {
   .subscribe-button-promote {
     margin-top: 15px;
   }
+
+  .subscribe-sale-wrapper {
+    flex-direction: column;
+  }
+
+  .subscribe-sale-wrapper img {
+    width: 100%;
+    margin-bottom: 78px;
+  }
+
+  .subscribe-sale-title {
+    text-align: center;
+    font-size: 40px;
+  }
+
+  .subscribe-sale-procent {
+    margin-top: 58px;
+    padding: 17px 26px 26px;
+    width: 100%;
+    height: auto;
+  }
 }
+
+@media(max-width: 960px) {}
 
 @media(max-width: 780px) {
   .header {
@@ -2002,7 +2144,7 @@ footer a {
   }
 
   .footer-support-btn {
-    width: 100% !important;
+    /* width: 100% !important; */
     height: 45px;
   }
 
@@ -2073,7 +2215,6 @@ footer a {
 }
 
 @media(max-width: 700px) {
-
   .how-to-set-up-wrapper {
     grid-template-rows: auto auto auto;
   }
@@ -2152,9 +2293,32 @@ footer a {
   .setting-ellips-2 {
     display: none !important;
   }
+
+  .subscribe-sale-title {
+    text-align: center;
+    font-size: 30px;
+  }
+
+  .subscribe-sale-procent {
+    font-size: 30px;
+  }
+}
+
+@media(max-width: 639px) {
+
+  footer a,
+  .law-information {
+    font-size: 12px;
+    word-break: normal;
+  }
 }
 
 @media(max-width: 600px) {
+
+  .manage-card {
+    padding: 20px;
+  }
+
   .header {
     padding: 2px 20px;
   }
@@ -2249,10 +2413,8 @@ footer a {
   }
 
 
-
   .how-to-set-up-wrapper {
     gap: 10px;
-    width: 95%;
     margin: 0 auto 50px;
     padding: 0 10px 0 0;
   }
@@ -2303,6 +2465,11 @@ footer a {
   opacity: 1;
   visibility: 1;
   z-index: 10;
+}
+
+.subsribe-tab-wrapper {
+  padding: 0 25px 62px;
+  margin: -25px 0 0;
 }
 
 @media(max-width: 500px) {
@@ -2385,12 +2552,6 @@ footer a {
     width: 35px;
   }
 
-  footer a,
-  .law-information {
-    font-size: 12px;
-    word-break: normal;
-  }
-
   .recomendation-card-links a {
     font-size: 14px;
   }
@@ -2398,13 +2559,61 @@ footer a {
   .manage-card {
     margin-top: 70px;
   }
+
+  .footer-images {
+    margin: 0 !important;
+    width: 100%;
+    padding-right: 10px;
+  }
+
+  .footer-image-payment {
+    height: 60px;
+    width: 156px;
+  }
+
+  .footer-gradient {
+    height: 11px;
+  }
+
+  footer a,
+  .law-information,
+  .footer-support-btn {
+    font-size: 10px;
+  }
+
+  .subscribe-promote-title {
+    font-size: 19px;
+  }
+
+  .subscribe-sale-wrapper img {
+    margin-bottom: 30px;
+  }
+
+  .subscribe-sale-title {
+    text-align: center;
+    font-size: 25px;
+  }
+
+  .subscribe-sale-procent {
+    font-size: 25px;
+    margin-top: 30px;
+  }
+}
+
+@media(max-width: 420px) {
+  .subscribe-promote-title {
+    font-size: 18px;
+  }
 }
 
 @media(max-width: 400px) {
+  .subsribe-tab-wrapper {
+    padding: 0;
+  }
 
   .recomendation-wrapper {
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 1fr 180px 180px 180px 180px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 125px 125px 125px 125px 125px;
     gap: 10px;
   }
 
@@ -2421,7 +2630,31 @@ footer a {
   }
 
   .recomendation-card:nth-child(11) {
-    grid-column: 2/3;
+    grid-column: 1/3;
+    grid-row: 5/6;
+  }
+
+  .recomendation-card,
+  .recomendation-card-info {
+    padding: 10px 20px 20px;
+  }
+
+  .recomendation-card-title {
+    margin-top: 7px;
+  }
+
+  .recomendation-card-links {
+    margin-top: 0;
+    gap: 0;
+  }
+
+  .recomendation-card-links a {
+    font-size: 12px;
+  }
+
+  .recomendation-card-icon {
+    height: 40px;
+    width: 40px;
   }
 
   .how-to-set-up-card-title {
@@ -2441,15 +2674,25 @@ footer a {
     display: block;
   }
 
-  footer a,
-  .law-information {
-    font-size: 10px;
-    word-break: normal;
+  .subscribe-promote-title {
+    font-size: 20px;
+  }
+}
+
+@media(max-width: 365px) {
+  .subscribe-promote-title {
+    font-size: 17px;
   }
 }
 
 @media(max-width: 350px) {
   .header-profile-dropdown button {
     font-size: 12px;
+  }
+}
+
+@media(max-width: 340px) {
+  .subscribe-promote-title {
+    font-size: 15px;
   }
 }

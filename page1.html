@@ -117,10 +117,10 @@
                 <div class="playlists-manage-item-title">медиатека</div>
                 <div class="playlists-manage-item-subtitle">Ссылка для OTT player</div>
               </div>
-              <button class="button" disabled>скопировать ссылку</button>
+              <button class="button copied">скопировать ссылку</button>
             </div>
             <div class="playlists-manage-item d-flex align-items-center justify-content-between">
-              <button class="button" disabled>получить доступ</button>
+              <button class="button copy-btn">получить доступ</button>
             </div>
           </div>
           <div class="w-50 playlists-manage-image">
@@ -198,7 +198,7 @@
             </div> -->
       <!-- END PAGE 1 ACTIVE -->
       <!-- START PAGE 2 -->
-      <div class="tab-page" data-page="2">
+      <div class="tab-page subsribe-tab-wrapper" data-page="2">
         <div class=" subscribe-content">
           <div class="subsribe-plan-card">
             <div class="subsribe-plan-title">месячная</div>
@@ -250,9 +250,9 @@
       </div>
       <!-- END PAGE 2 -->
       <!-- START PAGE 2 ACTIVE -->
-      <!-- <div class="tab-page" data-page="2">
+      <!-- <div class="tab-page subsribe-tab-wrapper" data-page="2">
         <div class="subscribe-content">
-          <div class="h-100 d-flex flex-column">
+          <div class="h-100 d-flex flex-column justify-content-between">
             <div class="subsribe-plan-card">
               <div class="subsribe-plan-title">месячная</div>
               <div class="subsribe-plan-status">не активна</div>
@@ -262,7 +262,7 @@
               <button class="button changePlan button--grey">сменить план</button>
             </div>
           </div>
-          <div class="h-100 d-flex flex-column">
+          <div class="h-100 d-flex flex-column justify-content-between">
             <div class="subsribe-plan-card active">
               <div class="subsribe-plan-title">квартальная</div>
               <div class="subsribe-plan-status active">активна</div>
@@ -284,7 +284,7 @@
               <button class="button">продлить подписку</button>
             </div>
           </div>
-          <div class="h-100 d-flex flex-column">
+          <div class="h-100 d-flex flex-column justify-content-between">
             <div class="subsribe-plan-card">
               <div class="subsribe-plan-title">Полугодовая</div>
               <div class="subsribe-plan-status">не активна</div>
@@ -297,6 +297,9 @@
               <button class="button button--grey">сменить план</button>
             </div>
             <div class="subscribe-promote small">
+              <div class="subsribe-plan-price">
+                $100
+              </div>
               <button class="button-secondary subscribe-button-promote">купить бессрочно</button>
             </div>
           </div>
@@ -318,6 +321,57 @@
         </div>
       </div> -->
       <!-- END PAGE 2 ACTIVE -->
+      <!-- START PAGE 2 INFINITY -->
+      <!-- <div class="tab-page subsribe-tab-wrapper" data-page="2">
+        <div class=" subscribe-content">
+          <div class="subsribe-plan-card">
+            <div class="subsribe-plan-title">месячная</div>
+            <div class="subsribe-plan-status">не активна</div>
+            <div class="subsribe-plan-period">1 месяц</div>
+            <div class="subsribe-plan-name">vip-пакет все включено</div>
+            <div class="subsribe-plan-price">$4</div>
+            <button class="button changePlan button--grey">сменить план</button>
+          </div>
+          <div class="subsribe-plan-card">
+            <div class="subsribe-plan-title">квартальная</div>
+            <div class="subsribe-plan-status">не активна</div>
+            <div class="subsribe-plan-period">3 месяца</div>
+            <div class="subsribe-plan-name">vip-пакет все включено</div>
+            <div class="subsribe-plan-price">$12</div>
+            <button class="button changePlan button--grey">сменить план</button>
+          </div>
+          <div class="subsribe-plan-card">
+            <div class="subsribe-plan-title">Полугодовая</div>
+            <div class="subsribe-plan-status">не активна</div>
+            <div class="subsribe-plan-period">6 месяцев</div>
+            <div class="subsribe-plan-name">vip-пакет все включено</div>
+            <div class="subsribe-plan-price">
+              $21
+              <span>-12,5%</span>
+            </div>
+            <button class="button changePlan button--grey">сменить план</button>
+          </div>
+          <div class="subsribe-plan-card">
+            <div class="subsribe-plan-title">Годовая</div>
+            <div class="subsribe-plan-status">не активна</div>
+            <div class="subsribe-plan-period">12 месяцев</div>
+            <div class="subsribe-plan-name">vip-пакет все включено</div>
+            <div class="subsribe-plan-price">
+              $36
+              <span>-25%</span>
+            </div>
+            <button class="button changePlan button--grey">сменить план</button>
+          </div>
+        </div>
+        <div class="subscribe-footer">
+          <div class="subscribe-promote">
+            <div class="subscribe-promote-title">вы уже приобрели бессрочную подписку навсегда!</div>
+            <button class="button-secondary subscribe-button-promote button-secondary--grey">купить бессрочно</button>
+          </div>
+          <img src="./assets/images/payment.svg" alt="">
+        </div>
+      </div> -->
+      <!-- END PAGE 2 INFINITY  -->
       <!-- START PAGE 3 -->
       <div class="tab-page" data-page="3">
         <div class="profile-setting-content">
@@ -408,511 +462,521 @@
               Все ваши платежи будут отображены на этой странице. <br> <br>
             </div>
           </div>
-          <di class="payment-history-image-wrapper">
+          <div class="payment-history-image-wrapper">
             <div class="payment-history-image"></div>
-        </div>
-      </div>
-      <!-- END PAGE 4 -->
-
-    </div>
-  </div>
-  <img src="./assets/images/icons/ellipse-1.svg" class="manage-ellipse ellipse ellipse-1" alt="">
-
-
-  <div class="wrapper recomendation-title">
-    рекомендуемые приложения для просмотра
-  </div>
-  <div class="wrapper position-relative recomendation-wrapper">
-    <img src="./assets/images/icons/ellipse-recomend-2.svg" alt="" class="ellipse recomendation-elip-2">
-    <a class="position-relative recomendation-card--info" href="https://ottplayer.tv/" target="_blank">
-      <div class="recomendation-card">
-        <div class="d-flex align-items-center justify-content-start recomendation-card-header">
-          <div class="recomendation-card-icon">
-            <img src="./assets/images/icons/recomend-1.svg" alt="">
           </div>
         </div>
-        <div class="recomendation-card-descr">
-          На данный момент самым удобным <br>
-          приложением для просмотра является Ott Player, <br>
-          но вы можете выбрать любое из понравившихся
-        </div>
+        <!-- END PAGE 4 -->
+
       </div>
-      <img src="./assets/images/icons/ellipse-recomend-1.svg" alt="" class=" ellipse recomendation-elip-1">
+    </div>
+    <a class="subscribe-sale-wrapper wrapper" href="https://t.me/iptvtigra_bot" target="_blank">
+      <img src="./assets/images/sale.png" alt="">
+      <div class="subscribe-sale-title">для резидентов <span>Р</span>еспублики <br>
+        <span>Б</span>еларусь и <span>Р</span>оссии
+      </div>
+      <div class="subscribe-sale-procent">
+        <div>30<span>%</span></div> скидка
+      </div>
     </a>
-    <div class="recomendation-card">
-      <div class="recomendation-card-info">
-        <div class="d-flex align-items-center justify-content-center">
-          <div class="recomendation-card-icon m-0">
-            <img src="./assets/images/icons/recomend-2.svg" class="m-0" alt="">
-          </div>
-        </div>
-        <div class="recomendation-card-links">
-          <a href="#" target="_blank">Ott Player</a>
-        </div>
-      </div>
-      <div class="recomendation-card-content">
-        <div class="d-flex align-items-center justify-content-start recomendation-card-header">
-          <div class="recomendation-card-icon">
-            <img src="./assets/images/icons/recomend-2.svg" alt="">
-          </div>
-        </div>
-        <div class="recomendation-card-title">
-          iOS
-        </div>
-      </div>
-    </div>
+    <img src="./assets/images/icons/ellipse-1.svg" class="manage-ellipse ellipse ellipse-1" alt="">
 
-    <div class="recomendation-card">
-      <div class="recomendation-card-info">
-        <div class="d-flex align-items-center justify-content-center">
-          <div class="recomendation-card-icon">
-            <img src="./assets/images/icons/recomend-3.svg" alt="">
+
+    <div class="wrapper recomendation-title">
+      рекомендуемые приложения для просмотра
+    </div>
+    <div class="wrapper position-relative recomendation-wrapper">
+      <img src="./assets/images/icons/ellipse-recomend-2.svg" alt="" class="ellipse recomendation-elip-2">
+      <a class="position-relative recomendation-card--info" href="https://ottplayer.tv/" target="_blank">
+        <div class="recomendation-card">
+          <div class="d-flex align-items-center justify-content-start recomendation-card-header">
+            <div class="recomendation-card-icon">
+              <img src="./assets/images/icons/recomend-1.svg" alt="">
+            </div>
+          </div>
+          <div class="recomendation-card-descr">
+            На данный момент самым удобным <br>
+            приложением для просмотра является Ott Player, <br>
+            но вы можете выбрать любое из понравившихся
           </div>
         </div>
-        <div class="recomendation-card-links">
-          <a href="#" target="_blank">Ott Player</a>
-          <a href="#" target="_blank">VLC</a>
-        </div>
-      </div>
-      <div class="recomendation-card-content">
-        <div class="d-flex align-items-center justify-content-start recomendation-card-header">
-          <div class="recomendation-card-icon">
-            <img src="./assets/images/icons/recomend-3.svg" alt="">
+        <img src="./assets/images/icons/ellipse-recomend-1.svg" alt="" class=" ellipse recomendation-elip-1">
+      </a>
+      <div class="recomendation-card">
+        <div class="recomendation-card-info">
+          <div class="d-flex align-items-center justify-content-center">
+            <div class="recomendation-card-icon m-0">
+              <img src="./assets/images/icons/recomend-2.svg" class="m-0" alt="">
+            </div>
+          </div>
+          <div class="recomendation-card-links">
+            <a href="#" target="_blank">Ott Player</a>
           </div>
         </div>
-        <div class="recomendation-card-title">
-          Android
+        <div class="recomendation-card-content">
+          <div class="d-flex align-items-center justify-content-start recomendation-card-header">
+            <div class="recomendation-card-icon">
+              <img src="./assets/images/icons/recomend-2.svg" alt="">
+            </div>
+          </div>
+          <div class="recomendation-card-title">
+            iOS
+          </div>
         </div>
       </div>
 
-    </div>
-    <div class="recomendation-card--empty"> </div>
-    <div class="recomendation-card">
-      <div class="recomendation-card-info">
-        <div class="d-flex align-items-center justify-content-center">
-          <div class="recomendation-card-icon">
-            <img src="./assets/images/icons/recomend-2.svg" alt="">
+      <div class="recomendation-card">
+        <div class="recomendation-card-info">
+          <div class="d-flex align-items-center justify-content-center">
+            <div class="recomendation-card-icon">
+              <img src="./assets/images/icons/recomend-3.svg" alt="">
+            </div>
           </div>
-        </div>
-        <div class="recomendation-card-links">
-          <a href="#" target="_blank">Ott Player</a>
-        </div>
-      </div>
-      <div class="recomendation-card-content">
-        <div class="d-flex align-items-center justify-content-start recomendation-card-header">
-          <div class="recomendation-card-icon">
-            <img src="./assets/images/icons/recomend-2.svg" alt="">
-          </div>
-        </div>
-        <div class="recomendation-card-title">
-          Apple TV
-        </div>
-      </div>
-    </div>
-    <div class="recomendation-card">
-      <div class="recomendation-card-info">
-        <div class="d-flex align-items-center justify-content-center ">
-          <div class="recomendation-card-icon">
-            <img src="./assets/images/icons/recomend-3.svg" alt="">
-          </div>
-        </div>
-        <div class="recomendation-card-links">
-          <a href="#" target="_blank">Ott Player</a>
-          <a href="#" target="_blank">VLC</a>
-        </div>
-      </div>
-      <div class="recomendation-card-content">
-        <div class="d-flex align-items-center justify-content-start recomendation-card-header">
-          <div class="recomendation-card-icon">
-            <img src="./assets/images/icons/recomend-3.svg" alt="">
-          </div>
-        </div>
-        <div class="recomendation-card-title">
-          Android TV
-        </div>
-      </div>
-    </div>
-    <div class="recomendation-card">
-      <div class="recomendation-card-info">
-        <div class="d-flex align-items-center justify-content-center gap-3">
-          <div class="recomendation-card-icon">
-            <img src="./assets/images/icons/recomend-4.svg" alt="">
-          </div>
-          <div class="recomendation-card-icon">
-            <img src="./assets/images/icons/recomend-5.svg" alt="">
-          </div>
-        </div>
-        <div class="recomendation-card-links">
-          <a href="#" target="_blank">Ott Player</a>
-        </div>
-      </div>
-      <div class="recomendation-card-content">
-        <div class="d-flex align-items-center justify-content-start gap-3 recomendation-card-header">
-          <div class="recomendation-card-icon">
-            <img src="./assets/images/icons/recomend-4.svg" alt="">
-          </div>
-          <div class="recomendation-card-icon">
-            <img src="./assets/images/icons/recomend-5.svg" alt="">
-          </div>
-        </div>
-        <div class="recomendation-card-title">
-          Smart TV
-        </div>
-      </div>
-    </div>
-    <div class="recomendation-card">
-      <div class="recomendation-card-info">
-        <div class="d-flex align-items-center justify-content-center">
-          <div class="recomendation-card-icon">
-            <img src="./assets/images/icons/recomend-6.svg" alt="">
-          </div>
-        </div>
-        <div class="recomendation-card-links">
-          <a href="#" target="_blank">Ott Player</a>
-          <a href="#" target="_blank">VLC</a>
-        </div>
-      </div>
-      <div class="recomendation-card-content">
-        <div class="d-flex align-items-center justify-content-start recomendation-card-header">
-          <div class="recomendation-card-icon">
-            <img src="./assets/images/icons/recomend-6.svg" alt="">
-          </div>
-        </div>
-        <div class="recomendation-card-title">
-          Windows
-        </div>
-      </div>
-    </div>
-    <div class="recomendation-card">
-      <div class="recomendation-card-info">
-        <div class="d-flex align-items-center justify-content-center">
-          <div class="recomendation-card-icon">
-            <img src="./assets/images/icons/recomend-8.svg" alt="">
-          </div>
-        </div>
-        <div class="recomendation-card-links">
-          <a href="#" target="_blank">XMMS</a>
-          <a href="#" target="_blank">VLC</a>
-        </div>
-      </div>
-      <div class="recomendation-card-content">
-        <div class="d-flex align-items-center justify-content-start recomendation-card-header">
-          <div class="recomendation-card-icon">
-            <img src="./assets/images/icons/recomend-8.svg" alt="">
-          </div>
-        </div>
-        <div class="recomendation-card-title">
-          Linux
-        </div>
-      </div>
-    </div>
-    <div class="recomendation-card">
-      <div class="recomendation-card-info">
-        <div class="d-flex align-items-center justify-content-center">
-          <div class="recomendation-card-icon">
-            <img src="./assets/images/icons/recomend-7.svg" alt="">
-          </div>
-        </div>
-        <div class="recomendation-card-links">
-          <div class="recomendation-card-links-group">
+          <div class="recomendation-card-links">
             <a href="#" target="_blank">Ott Player</a>
             <a href="#" target="_blank">VLC</a>
           </div>
-          <div class="recomendation-card-links-group">
-            <a href="#" target="_blank">iTunes</a>
-            <a href="#" target="_blank">Songbird</a>
-          </div>
-          <div class="recomendation-card-links-group">
-            <a href="#" target="_blank">Real Player</a>
-          </div>
         </div>
-      </div>
-      <div class="recomendation-card-content">
-        <div class="d-flex align-items-center justify-content-start recomendation-card-header">
-          <div class="recomendation-card-icon">
-            <img src="./assets/images/icons/recomend-7.svg" alt="">
+        <div class="recomendation-card-content">
+          <div class="d-flex align-items-center justify-content-start recomendation-card-header">
+            <div class="recomendation-card-icon">
+              <img src="./assets/images/icons/recomend-3.svg" alt="">
+            </div>
+          </div>
+          <div class="recomendation-card-title">
+            Android
           </div>
         </div>
-        <div class="recomendation-card-title">
-          MacOS
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="wrapper how-to-set-up">Как настроить и смотреть IPTV?</div>
-  <div class="wrapper how-to-set-up-descr">
-    Простая настройка IPTV на телевизоре, <br>
-    компьютере, и телефоне за 5 минут
-  </div>
-  <div class="wrapper how-to-set-up-wrapper">
-    <div class="position-relative">
-      <div class="how-to-set-up-card">
-        <div class="d-flex align-items-center justify-content-start how-to-set-up-card-header">
-          <div class="how-to-set-up-card-number">1</div>
-        </div>
-        <div class="how-to-set-up-card-title">
-          Оплатите подписку
-        </div>
-      </div>
-      <img src="./assets/images/icons/ellipse-settings-1.svg" alt="" class="ellipse setting-ellips-1">
-    </div>
 
-    <div class="position-relative">
-      <div class="how-to-set-up-card">
-        <div class="d-flex align-items-center justify-content-start how-to-set-up-card-header">
-          <div class="how-to-set-up-card-number">2</div>
+      </div>
+      <div class="recomendation-card--empty"> </div>
+      <div class="recomendation-card">
+        <div class="recomendation-card-info">
+          <div class="d-flex align-items-center justify-content-center">
+            <div class="recomendation-card-icon">
+              <img src="./assets/images/icons/recomend-2.svg" alt="">
+            </div>
+          </div>
+          <div class="recomendation-card-links">
+            <a href="#" target="_blank">Ott Player</a>
+          </div>
         </div>
-        <div class="how-to-set-up-card-title">
-          Получите плей-лист
+        <div class="recomendation-card-content">
+          <div class="d-flex align-items-center justify-content-start recomendation-card-header">
+            <div class="recomendation-card-icon">
+              <img src="./assets/images/icons/recomend-2.svg" alt="">
+            </div>
+          </div>
+          <div class="recomendation-card-title">
+            Apple TV
+          </div>
         </div>
       </div>
-      <img src="./assets/images/icons/ellipse-settings-2.svg" alt="" class=" ellipse setting-ellips-2">
-    </div>
-    <div class="position-relative">
-      <div class="how-to-set-up-card">
-        <div class="d-flex align-items-center justify-content-start how-to-set-up-card-header">
-          <div class="how-to-set-up-card-number">3</div>
+      <div class="recomendation-card">
+        <div class="recomendation-card-info">
+          <div class="d-flex align-items-center justify-content-center ">
+            <div class="recomendation-card-icon">
+              <img src="./assets/images/icons/recomend-3.svg" alt="">
+            </div>
+          </div>
+          <div class="recomendation-card-links">
+            <a href="#" target="_blank">Ott Player</a>
+            <a href="#" target="_blank">VLC</a>
+          </div>
         </div>
-        <div class="how-to-set-up-card-title">
-          Установите <br> подходящий IPTV-плеер
-        </div>
-      </div>
-      <img src="./assets/images/icons/ellipse-settings-3.svg" alt="" class="ellipse setting-ellips-3">
-    </div>
-    <div class="how-to-set-up-card--empty"></div>
-    <div class="position-relative">
-      <div class="how-to-set-up-card">
-        <div class="d-flex align-items-center justify-content-start how-to-set-up-card-header">
-          <div class="how-to-set-up-card-number">4</div>
-        </div>
-        <div class="how-to-set-up-card-title">
-          Пропишите плей-лист в плеере
-        </div>
-      </div>
-      <img src="./assets/images/icons/ellipse-settings-4.svg" alt="" class="ellipse setting-ellips-4">
-    </div>
-    <div class="position-relative">
-      <div class="how-to-set-up-card how-to-set-up-card--last">
-        <div class="d-flex align-items-center justify-content-start how-to-set-up-card-header">
-          <div class="how-to-set-up-card-number">5</div>
-        </div>
-        <div class="how-to-set-up-card-title">
-          Наслаждайтесь просмотром!
+        <div class="recomendation-card-content">
+          <div class="d-flex align-items-center justify-content-start recomendation-card-header">
+            <div class="recomendation-card-icon">
+              <img src="./assets/images/icons/recomend-3.svg" alt="">
+            </div>
+          </div>
+          <div class="recomendation-card-title">
+            Android TV
+          </div>
         </div>
       </div>
-      <img src="./assets/images/icons/ellipse-settings-5.svg" alt="" class="ellipse setting-ellips-5">
-    </div>
-
-  </div>
-
-  <!-- START MODALS -->
-  <div class="overlay" id="paySubscribeModal">
-    <div class="modal-wrapper">
-      <img src="./assets/images/icons/close.svg" alt="" class="modal-close-icon">
-      <div class="modal-content">
-        <div class="modal-title">Благодарим за подписку!</div>
-        <div class="modal-message">
-          Ваша проплата прошла успешно. <br><br>
-          В течении 20 минут вы получите доступ к плейлисту VIP-пакет, ссылкам, медиатеке и настройкам <br>
-          Ministra Player
+      <div class="recomendation-card">
+        <div class="recomendation-card-info">
+          <div class="d-flex align-items-center justify-content-center gap-3">
+            <div class="recomendation-card-icon">
+              <img src="./assets/images/icons/recomend-4.svg" alt="">
+            </div>
+            <div class="recomendation-card-icon">
+              <img src="./assets/images/icons/recomend-5.svg" alt="">
+            </div>
+          </div>
+          <div class="recomendation-card-links">
+            <a href="#" target="_blank">Ott Player</a>
+          </div>
         </div>
-        <a href="#">
-          <button class="button active">В личный кабинет</button>
-        </a>
-      </div>
-    </div>
-  </div>
-  <div class="overlay" id="paySubscribeErrorModal">
-    <div class="modal-wrapper">
-      <img src="./assets/images/icons/close.svg" alt="" class="modal-close-icon">
-      <div class="modal-content">
-        <div class="modal-title-error mb-3">ошибка</div>
-        <div class="modal-message mb-5">
-          Не получилось оплатить :(
+        <div class="recomendation-card-content">
+          <div class="d-flex align-items-center justify-content-start gap-3 recomendation-card-header">
+            <div class="recomendation-card-icon">
+              <img src="./assets/images/icons/recomend-4.svg" alt="">
+            </div>
+            <div class="recomendation-card-icon">
+              <img src="./assets/images/icons/recomend-5.svg" alt="">
+            </div>
+          </div>
+          <div class="recomendation-card-title">
+            Smart TV
+          </div>
         </div>
-        <a href="#" class="mt-3">
-          <button class="button active">вернуться В личный кабинет</button>
-        </a>
       </div>
-    </div>
-  </div>
-
-  <div class="overlay" id="changeLoginModal">
-    <div class="modal-wrapper">
-      <img src="./assets/images/icons/close.svg" alt="" class="modal-close-icon">
-      <div class="modal-content">
-        <div class="modal-title">изменение логина</div>
-        <div class="input mb-3">
-          <input type="text" placeholder="Новый логин">
+      <div class="recomendation-card">
+        <div class="recomendation-card-info">
+          <div class="d-flex align-items-center justify-content-center">
+            <div class="recomendation-card-icon">
+              <img src="./assets/images/icons/recomend-6.svg" alt="">
+            </div>
+          </div>
+          <div class="recomendation-card-links">
+            <a href="#" target="_blank">Ott Player</a>
+            <a href="#" target="_blank">VLC</a>
+          </div>
         </div>
-        <button class="button" disabled>сохранить</button>
-      </div>
-      <!-- Успех -->
-      <div class="modal-content" style="display: none;">
-        <div class=" modal-title">изменение логина</div>
-        <div class="modal-success">сохранено!</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="overlay" id="changePasswordModal">
-    <div class="modal-wrapper">
-      <img src="./assets/images/icons/close.svg" alt="" class="modal-close-icon">
-      <div class="modal-content">
-        <div class="modal-title">изменение <br> пароля</div>
-        <div class="mb-3">Введи текущий пароль и придумай новый</div>
-        <div class="input input--password mb-2">
-          <input placeholder="Текущий пароль" type="password">
-          <img src="./assets/images/icons/hide.svg" alt="" class="input-toggle-icon input-hide">
-          <img src="./assets/images/icons/show.svg" alt="" class="input-toggle-icon input-show">
-          <div class="input-error-message"></div>
+        <div class="recomendation-card-content">
+          <div class="d-flex align-items-center justify-content-start recomendation-card-header">
+            <div class="recomendation-card-icon">
+              <img src="./assets/images/icons/recomend-6.svg" alt="">
+            </div>
+          </div>
+          <div class="recomendation-card-title">
+            Windows
+          </div>
         </div>
-        <a href="#" class="text-left mb-3">Не помню пароль</a>
-        <div class="input input--password mb-3">
-          <input placeholder="Новый пароль" type="password">
-          <img src="./assets/images/icons/hide.svg" alt="" class="input-toggle-icon input-hide">
-          <img src="./assets/images/icons/show.svg" alt="" class="input-toggle-icon input-show">
-          <div class="input-error-message"></div>
+      </div>
+      <div class="recomendation-card">
+        <div class="recomendation-card-info">
+          <div class="d-flex align-items-center justify-content-center">
+            <div class="recomendation-card-icon">
+              <img src="./assets/images/icons/recomend-8.svg" alt="">
+            </div>
+          </div>
+          <div class="recomendation-card-links">
+            <a href="#" target="_blank">XMMS</a>
+            <a href="#" target="_blank">VLC</a>
+          </div>
         </div>
-        <button class="button mb-2" disabled>изменить пароль</button>
-        <button class="modal-cancel-btn">отменить</button>
-      </div>
-      <!-- Успех -->
-      <div class="modal-content" style="display: none;">
-        <div class=" modal-title">изменение <br> пароля</div>
-        <div class="modal-success">сохранено!</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="overlay" id="changeEmailModal">
-    <div class="modal-wrapper">
-      <img src="./assets/images/icons/close.svg" alt="" class="modal-close-icon">
-      <!-- Первый етап -->
-      <div class="modal-content">
-        <div class="modal-title">изменение e-mail</div>
-        <div class="input mb-3">
-          <input type="text" placeholder="Новый е-mail">
+        <div class="recomendation-card-content">
+          <div class="d-flex align-items-center justify-content-start recomendation-card-header">
+            <div class="recomendation-card-icon">
+              <img src="./assets/images/icons/recomend-8.svg" alt="">
+            </div>
+          </div>
+          <div class="recomendation-card-title">
+            Linux
+          </div>
         </div>
-        <div class="text-center mb-3">
-          На новый е-mail прийдет письмо для <br> подтверждения, следуйте инструкциям в нем
-        </div>
-        <button class="button" disabled>сохранить</button>
       </div>
-      <!-- Второй етап (введение пароля подтверждение) -->
-      <div class="modal-content" style="display: none;">
-        <div class="modal-title">изменение e-mail</div>
-        <div class="input mb-3">
-          <input type="text" placeholder="Введите код из нашего письма">
-        </div>
-        <button class="button" disabled>сохранить</button>
-      </div>
-      <!-- Третий етап (успех) -->
-      <div class="modal-content" style="display: none;">
-        <div class=" modal-title">изменение e-mail</div>
-        <div class="modal-success">сохранено!</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="overlay" id="changePhoneModal">
-    <div class="modal-wrapper">
-      <img src="./assets/images/icons/close.svg" alt="" class="modal-close-icon">
-      <!-- Первый етап -->
-      <div class="modal-content">
-        <div class="modal-title">изменение телефона</div>
-        <div class="input mb-3">
-          <input type="text" placeholder="Новый номер телефона">
-        </div>
-        <div class="text-center mb-3">
-          На указанный номер прийдет СМС <br> для подтверждения
-        </div>
-        <button class="button" disabled>сохранить</button>
-      </div>
-      <!-- Второй етап (введение пароля подтверждение) -->
-      <div class="modal-content" style="display: none;">
-        <div class="modal-title">изменение телефона</div>
-        <div class="input mb-3">
-          <input type="text" placeholder="Введите код из СМС">
-        </div>
-        <button class="button" disabled>сохранить</button>
-      </div>
-      <!-- Третий етап (успех) -->
-      <div class="modal-content" style="display: none;">
-        <div class=" modal-title">изменение телефона</div>
-        <div class="modal-success">сохранено!</div>
-      </div>
-    </div>
-  </div>
-  <!-- END MODALS -->
-  <footer>
-    <div class="wrapper footer" id="footer">
-      <div class="d-flex flex-column align-items-start footer-section footer-section--contacts">
-        <div class="law-information d-flex align-items-center mb-1">
-          <a href="#">Юридическая информация</a>
-          <div class="law-badge">
-            <div>
-              Сервис TIGRA TV не хранит и не транслирует контент. Предоставленный контент на нашем сайте предоставляется
-              из других источников всемирной сети, которые находятся в открытом или публичном доступе.
-              Мы не несем никакой ответственности за место происхождения, качество и легальность данного контента. Наш
-              сервис предоставляет техническое и информационное решение по доступу к данному контенту. Пользователь
-              платит исключительно за техническо-информационное решение!
+      <div class="recomendation-card">
+        <div class="recomendation-card-info">
+          <div class="d-flex align-items-center justify-content-center">
+            <div class="recomendation-card-icon">
+              <img src="./assets/images/icons/recomend-7.svg" alt="">
+            </div>
+          </div>
+          <div class="recomendation-card-links">
+            <div class="recomendation-card-links-group">
+              <a href="#" target="_blank">Ott Player</a>
+              <a href="#" target="_blank">VLC</a>
+            </div>
+            <div class="recomendation-card-links-group">
+              <a href="#" target="_blank">iTunes</a>
+              <a href="#" target="_blank">Songbird</a>
+            </div>
+            <div class="recomendation-card-links-group">
+              <a href="#" target="_blank">Real Player</a>
             </div>
           </div>
         </div>
-        <div class="law-information mb-1">
-          <a href="http://tigratvccp.ru/privacy-policy">Политика конфиденциальности</a>
-        </div>
-        <div class="law-information mb-1">
-          <a href="http://tigratvccp.ru/terms-of-use">Пользовательское соглашение</a>
-        </div>
-      </div>
-      <div class="footer-links">
-        <button class="button footer-support-btn">написать в поддержку</button>
-        <div class="d-flex align-items-center justify-content-center socmedia-links">
-          <a href="#" target="_blank">
-            <img src="./assets/images/icons/facebook.svg" alt="">
-          </a>
-          <a href="#" target="_blank">
-            <img src="./assets/images/icons/vk.svg" alt="">
-          </a>
-          <a href="#" target="_blank">
-            <img src="./assets/images/icons/instagram.svg" alt="">
-          </a>
-          <a href="#" target="_blank">
-            <img src="./assets/images/icons/telegram.svg" alt="">
-          </a>
-          <a href="#" target="_blank">
-            <img src="./assets/images/icons/youtube.svg" alt="">
-          </a>
-        </div>
-      </div>
-      <div class="d-flex flex-column justify-content-between align-items-end footer-section">
-        <div class="footer-contacts">
-          <a href="mailto:iptvtigra@gmail.com" target="_blank">iptvtigra@gmail.com</a>
-          <a href="tel:+79182885281">тел. +79182885281</a>
-          <div class="law-information">Все права защищены <br> © tigra tv {{date('Y')}}</div>
+        <div class="recomendation-card-content">
+          <div class="d-flex align-items-center justify-content-start recomendation-card-header">
+            <div class="recomendation-card-icon">
+              <img src="./assets/images/icons/recomend-7.svg" alt="">
+            </div>
+          </div>
+          <div class="recomendation-card-title">
+            MacOS
+          </div>
         </div>
       </div>
     </div>
-    <div class="footer-gradient footer-gradient--1"></div>
-    <div class="wrapper footer-images d-flex align-items-center justify-content-between mt-3">
-      <div>
-        <img src="./assets/images/payment.svg" class="footer-image-payment" alt="">
+    <div class="wrapper how-to-set-up">Как настроить и смотреть IPTV?</div>
+    <div class="wrapper how-to-set-up-descr">
+      Простая настройка IPTV на телевизоре, <br>
+      компьютере, и телефоне за 5 минут
+    </div>
+    <div class="wrapper how-to-set-up-wrapper">
+      <div class="position-relative">
+        <div class="how-to-set-up-card">
+          <div class="d-flex align-items-center justify-content-start how-to-set-up-card-header">
+            <div class="how-to-set-up-card-number">1</div>
+          </div>
+          <div class="how-to-set-up-card-title">
+            Оплатите подписку
+          </div>
+        </div>
+        <img src="./assets/images/icons/ellipse-settings-1.svg" alt="" class="ellipse setting-ellips-1">
       </div>
-      <a href="https://mox-studio.ru/?utm_source=tigra&utm_medium=organic&utm_campaign=footer" target="_blank">
-        <img src="./assets/images/studio-logo.png" class="studio-logo" alt="">
-      </a>
-      <!-- <div class="footer-mail-btn">
+
+      <div class="position-relative">
+        <div class="how-to-set-up-card">
+          <div class="d-flex align-items-center justify-content-start how-to-set-up-card-header">
+            <div class="how-to-set-up-card-number">2</div>
+          </div>
+          <div class="how-to-set-up-card-title">
+            Получите плей-лист
+          </div>
+        </div>
+        <img src="./assets/images/icons/ellipse-settings-2.svg" alt="" class=" ellipse setting-ellips-2">
+      </div>
+      <div class="position-relative">
+        <div class="how-to-set-up-card">
+          <div class="d-flex align-items-center justify-content-start how-to-set-up-card-header">
+            <div class="how-to-set-up-card-number">3</div>
+          </div>
+          <div class="how-to-set-up-card-title">
+            Установите <br> подходящий IPTV-плеер
+          </div>
+        </div>
+        <img src="./assets/images/icons/ellipse-settings-3.svg" alt="" class="ellipse setting-ellips-3">
+      </div>
+      <div class="how-to-set-up-card--empty"></div>
+      <div class="position-relative">
+        <div class="how-to-set-up-card">
+          <div class="d-flex align-items-center justify-content-start how-to-set-up-card-header">
+            <div class="how-to-set-up-card-number">4</div>
+          </div>
+          <div class="how-to-set-up-card-title">
+            Пропишите плей-лист в плеере
+          </div>
+        </div>
+        <img src="./assets/images/icons/ellipse-settings-4.svg" alt="" class="ellipse setting-ellips-4">
+      </div>
+      <div class="position-relative">
+        <div class="how-to-set-up-card how-to-set-up-card--last">
+          <div class="d-flex align-items-center justify-content-start how-to-set-up-card-header">
+            <div class="how-to-set-up-card-number">5</div>
+          </div>
+          <div class="how-to-set-up-card-title">
+            Наслаждайтесь просмотром!
+          </div>
+        </div>
+        <img src="./assets/images/icons/ellipse-settings-5.svg" alt="" class="ellipse setting-ellips-5">
+      </div>
+
+    </div>
+
+    <!-- START MODALS -->
+    <div class="overlay" id="paySubscribeModal">
+      <div class="modal-wrapper">
+        <img src="./assets/images/icons/close.svg" alt="" class="modal-close-icon">
+        <div class="modal-content">
+          <div class="modal-title">Благодарим за подписку!</div>
+          <div class="modal-message">
+            Ваша проплата прошла успешно. <br><br>
+            В течении 20 минут вы получите доступ к плейлисту VIP-пакет, ссылкам, медиатеке и настройкам <br>
+            Ministra Player
+          </div>
+          <a href="#">
+            <button class="button active">В личный кабинет</button>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="overlay" id="paySubscribeErrorModal">
+      <div class="modal-wrapper">
+        <img src="./assets/images/icons/close.svg" alt="" class="modal-close-icon">
+        <div class="modal-content">
+          <div class="modal-title-error mb-3">ошибка</div>
+          <div class="modal-message mb-5">
+            Не получилось оплатить :(
+          </div>
+          <a href="#" class="mt-3">
+            <button class="button active">вернуться В личный кабинет</button>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="overlay" id="changeLoginModal">
+      <div class="modal-wrapper">
+        <img src="./assets/images/icons/close.svg" alt="" class="modal-close-icon">
+        <div class="modal-content">
+          <div class="modal-title">изменение логина</div>
+          <div class="input mb-3">
+            <input type="text" placeholder="Новый логин">
+          </div>
+          <button class="button" disabled>сохранить</button>
+        </div>
+        <!-- Успех -->
+        <div class="modal-content" style="display: none;">
+          <div class=" modal-title">изменение логина</div>
+          <div class="modal-success">сохранено!</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="overlay" id="changePasswordModal">
+      <div class="modal-wrapper">
+        <img src="./assets/images/icons/close.svg" alt="" class="modal-close-icon">
+        <div class="modal-content">
+          <div class="modal-title">изменение <br> пароля</div>
+          <div class="mb-3">Введи текущий пароль и придумай новый</div>
+          <div class="input input--password mb-2">
+            <input placeholder="Текущий пароль" type="password">
+            <img src="./assets/images/icons/hide.svg" alt="" class="input-toggle-icon input-hide">
+            <img src="./assets/images/icons/show.svg" alt="" class="input-toggle-icon input-show">
+            <div class="input-error-message"></div>
+          </div>
+          <a href="#" class="text-left mb-3">Не помню пароль</a>
+          <div class="input input--password mb-3">
+            <input placeholder="Новый пароль" type="password">
+            <img src="./assets/images/icons/hide.svg" alt="" class="input-toggle-icon input-hide">
+            <img src="./assets/images/icons/show.svg" alt="" class="input-toggle-icon input-show">
+            <div class="input-error-message"></div>
+          </div>
+          <button class="button mb-2" disabled>изменить пароль</button>
+          <button class="modal-cancel-btn">отменить</button>
+        </div>
+        <!-- Успех -->
+        <div class="modal-content" style="display: none;">
+          <div class=" modal-title">изменение <br> пароля</div>
+          <div class="modal-success">сохранено!</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="overlay" id="changeEmailModal">
+      <div class="modal-wrapper">
+        <img src="./assets/images/icons/close.svg" alt="" class="modal-close-icon">
+        <!-- Первый етап -->
+        <div class="modal-content">
+          <div class="modal-title">изменение e-mail</div>
+          <div class="input mb-3">
+            <input type="text" placeholder="Новый е-mail">
+          </div>
+          <div class="text-center mb-3">
+            На новый е-mail прийдет письмо для <br> подтверждения, следуйте инструкциям в нем
+          </div>
+          <button class="button" disabled>сохранить</button>
+        </div>
+        <!-- Второй етап (введение пароля подтверждение) -->
+        <div class="modal-content" style="display: none;">
+          <div class="modal-title">изменение e-mail</div>
+          <div class="input mb-3">
+            <input type="text" placeholder="Введите код из нашего письма">
+          </div>
+          <button class="button" disabled>сохранить</button>
+        </div>
+        <!-- Третий етап (успех) -->
+        <div class="modal-content" style="display: none;">
+          <div class=" modal-title">изменение e-mail</div>
+          <div class="modal-success">сохранено!</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="overlay" id="changePhoneModal">
+      <div class="modal-wrapper">
+        <img src="./assets/images/icons/close.svg" alt="" class="modal-close-icon">
+        <!-- Первый етап -->
+        <div class="modal-content">
+          <div class="modal-title">изменение телефона</div>
+          <div class="input mb-3">
+            <input type="text" placeholder="Новый номер телефона">
+          </div>
+          <div class="text-center mb-3">
+            На указанный номер прийдет СМС <br> для подтверждения
+          </div>
+          <button class="button" disabled>сохранить</button>
+        </div>
+        <!-- Второй етап (введение пароля подтверждение) -->
+        <div class="modal-content" style="display: none;">
+          <div class="modal-title">изменение телефона</div>
+          <div class="input mb-3">
+            <input type="text" placeholder="Введите код из СМС">
+          </div>
+          <button class="button" disabled>сохранить</button>
+        </div>
+        <!-- Третий етап (успех) -->
+        <div class="modal-content" style="display: none;">
+          <div class=" modal-title">изменение телефона</div>
+          <div class="modal-success">сохранено!</div>
+        </div>
+      </div>
+    </div>
+    <!-- END MODALS -->
+    <footer>
+      <div class="wrapper footer" id="footer">
+        <div class="d-flex flex-column align-items-start footer-section footer-section--contacts">
+          <div class="law-information d-flex align-items-center mb-1">
+            <a href="#">Юридическая информация</a>
+            <div class="law-badge">
+              <div>
+                Сервис TIGRA TV не хранит и не транслирует контент. Предоставленный контент на нашем сайте
+                предоставляется
+                из других источников всемирной сети, которые находятся в открытом или публичном доступе.
+                Мы не несем никакой ответственности за место происхождения, качество и легальность данного контента. Наш
+                сервис предоставляет техническое и информационное решение по доступу к данному контенту. Пользователь
+                платит исключительно за техническо-информационное решение!
+              </div>
+            </div>
+          </div>
+          <div class="law-information mb-1">
+            <a href="http://tigratvccp.ru/privacy-policy">Политика конфиденциальности</a>
+          </div>
+          <div class="law-information mb-1">
+            <a href="http://tigratvccp.ru/terms-of-use">Пользовательское соглашение</a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <button class="button footer-support-btn">написать в поддержку</button>
+          <div class="d-flex align-items-center justify-content-center socmedia-links">
+            <!-- <a href="#" target="_blank">
+              <img src="./assets/images/icons/facebook.svg" alt="">
+            </a> -->
+            <a href="#" target="_blank">
+              <img src="./assets/images/icons/vk.svg" alt="">
+            </a>
+            <a href="#" target="_blank">
+              <img src="./assets/images/icons/instagram.svg" alt="">
+            </a>
+            <a href="#" target="_blank">
+              <img src="./assets/images/icons/telegram.svg" alt="">
+            </a>
+            <!-- <a href="#" target="_blank">
+              <img src="./assets/images/icons/youtube.svg" alt="">
+            </a> -->
+          </div>
+        </div>
+        <div class="d-flex flex-column justify-content-between align-items-end footer-section">
+          <div class="footer-contacts">
+            <a href="mailto:iptvtigra@gmail.com" target="_blank">iptvtigra@gmail.com</a>
+            <a href="tel:+375333839414">тел. +375333839414</a>
+            <div class="law-information">Все права защищены <br> © tigra tv {{date('Y')}}</div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-gradient footer-gradient--1"></div>
+      <div class="wrapper footer-images d-flex align-items-center justify-content-between mt-3">
+        <div>
+          <img src="./assets/images/payment.svg" class="footer-image-payment" alt="">
+        </div>
+        <a href="https://mox-studio.ru/?utm_source=tigra&utm_medium=organic&utm_campaign=footer" target="_blank">
+          <img src="./assets/images/studio-logo.png" class="studio-logo" alt="">
+        </a>
+        <!-- <div class="footer-mail-btn">
         <img src="./assets/images/icons/mail.svg" alt="">
       </div> -->
-    </div>
-    <div class="footer-gradient"></div>
-  </footer>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-    crossorigin="anonymous"></script>
-  <script src="./assets/js/script.js"></script>
+      </div>
+      <div class="footer-gradient"></div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"></script>
+    <script src="./assets/js/script.js"></script>
 </body>
 
 </html>
